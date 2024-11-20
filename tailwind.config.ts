@@ -9,8 +9,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        white: "#ededed",
+      },
+      backgroundImage: {
+        "header-gradient":
+          "linear-gradient(to right, #004457, #194d5d,#36515c,#36515c,#69615d,#69615d, #44555c,#36525c)",
+        "parallax-main": "url('/home.jpg')",
+      },
+      fontFamily: {
+        title: ["var(--font-alegreya)", "serif"],
+        text: ["var(--font-lora)", "serif"],
       },
     },
   },
