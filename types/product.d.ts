@@ -1,5 +1,4 @@
-declare interface IProduct {
-  _id?: string;
+declare interface IProduct extends IEntity {
   name: string;
   imgsUrl?: string[];
   family?: string;
@@ -66,7 +65,12 @@ declare const FRUIT_SUB_PRODUCT_TYPE = [
 ] as const;
 declare type TFruitSubProductType = (typeof FRUIT_SUB_PRODUCT_TYPE)[number];
 
-declare const LEGUME_SUB_PRODUCT_TYPE = ["lentils", "peas", "beans","other"] as const;
+declare const LEGUME_SUB_PRODUCT_TYPE = [
+  "lentils",
+  "peas",
+  "beans",
+  "other",
+] as const;
 declare type TLegumeSubProductType = (typeof LEGUME_SUB_PRODUCT_TYPE)[number];
 
 declare const SEASONS = [

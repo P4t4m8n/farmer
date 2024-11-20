@@ -1,6 +1,6 @@
 import Header from "@/components/Header/Header";
 
-export default function MainLayout({
+export default async function MainLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -8,7 +8,7 @@ export default function MainLayout({
   return (
     <>
       <Header />
-      {children}
+      <main className="pt-36  h-screen px-4">{children}</main>
     </>
   );
 }

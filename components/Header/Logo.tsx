@@ -6,7 +6,7 @@ export default function Logo() {
     <Link
       key="home"
       href="/"
-      className="flex items-center opacity-100 flex-col fill-gray-900"
+      className="flex items-center opacity-100 flex-col w-56 fill-gray-900"
     >
       <LogoSvg style={""} />
       <h3 className="font-title font-semibold text-lg text-white">

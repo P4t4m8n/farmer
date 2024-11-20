@@ -17,7 +17,7 @@ const Home = ({ products }: Props) => {
             Your one-stop shop for amazing products!
           </p>
           <button className="border-effect mt-4  z-10 w-[31rem]">
-            <Link href={"/vegetables"} className=" font-title text-center">
+            <Link href={"/products/vegetable"} className=" font-title text-center">
               Start shopping
             </Link>
           </button>
