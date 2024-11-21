@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as fs from "fs";
 import { fruits_veggies_data, fruits_veggies_img } from "./data";
+import { IProductModel, IQuantityType } from "./models";
 
 export async function seed() {
   const products = buildProductModels(fruits_veggies_data, fruits_veggies_img);
@@ -33,7 +34,11 @@ function buildProductModels(products: IProduct[], images: any[]) {
     };
     const productType = product?.productType as TProductType;
     const quantity = getRandomNumber(3, 100);
-    const quantityType: TQuantityType[] = ["unit", "kg", "pack"];
+    const quantityType: IQuantityType[] = [
+      { type: "unit", price: getRandomNumber(0, 50) },
+      { type: "kg", price: getRandomNumber(0, 50) },
+      { type: "pack", price: getRandomNumber(0, 50) },
+    ];
 
     const productModel = {
       name: product?.name,

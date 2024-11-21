@@ -16,8 +16,14 @@
       "fat": 0.2,
       "carbohydrates": 13.8,
       "fiber": 2.4,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 73,
     "quantityType": [
@@ -52,8 +58,14 @@
       "fat": 0.3,
       "carbohydrates": 22.8,
       "fiber": 2.6,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 77,
     "quantityType": [
@@ -88,8 +100,14 @@
       "fat": 0.2,
       "carbohydrates": 3.9,
       "fiber": 1.2,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Potassium", "Folate"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Folate"
+      ]
     },
     "quantity": 95,
     "quantityType": [
@@ -124,8 +142,14 @@
       "fat": 0.2,
       "carbohydrates": 9.6,
       "fiber": 2.8,
-      "vitamins": ["Vitamin A", "Vitamin K"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 100,
     "quantityType": [
@@ -160,8 +184,14 @@
       "fat": 0.4,
       "carbohydrates": 6.6,
       "fiber": 2.6,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Iron", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Iron",
+        "Calcium"
+      ]
     },
     "quantity": 49,
     "quantityType": [
@@ -196,8 +226,14 @@
       "fat": 0.4,
       "carbohydrates": 3.6,
       "fiber": 2.2,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Iron", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Iron",
+        "Magnesium"
+      ]
     },
     "quantity": 44,
     "quantityType": [
@@ -232,8 +268,14 @@
       "fat": 0.1,
       "carbohydrates": 17.5,
       "fiber": 2.2,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 91,
     "quantityType": [
@@ -268,8 +310,14 @@
       "fat": 0.1,
       "carbohydrates": 9.3,
       "fiber": 1.7,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Manganese"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Manganese"
+      ]
     },
     "quantity": 42,
     "quantityType": [
@@ -304,8 +352,14 @@
       "fat": 0.5,
       "carbohydrates": 33.1,
       "fiber": 2.1,
-      "vitamins": ["Vitamin B6", "Vitamin C"],
-      "minerals": ["Manganese", "Selenium"]
+      "vitamins": [
+        "Vitamin B6",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Manganese",
+        "Selenium"
+      ]
     },
     "quantity": 71,
     "quantityType": [
@@ -340,8 +394,14 @@
       "fat": 0.3,
       "carbohydrates": 7.7,
       "fiber": 2,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Manganese", "Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Manganese",
+        "Potassium"
+      ]
     },
     "quantity": 33,
     "quantityType": [
@@ -376,8 +436,14 @@
       "fat": 0.3,
       "carbohydrates": 14.5,
       "fiber": 2.4,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Manganese", "Copper"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Manganese",
+        "Copper"
+      ]
     },
     "quantity": 52,
     "quantityType": [
@@ -412,8 +478,14 @@
       "fat": 15,
       "carbohydrates": 8.5,
       "fiber": 6.7,
-      "vitamins": ["Vitamin K", "Vitamin E"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin E"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 59,
     "quantityType": [
@@ -448,8 +520,14 @@
       "fat": 0.1,
       "carbohydrates": 13.1,
       "fiber": 1.4,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Manganese", "Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Manganese",
+        "Potassium"
+      ]
     },
     "quantity": 19,
     "quantityType": [
@@ -484,8 +562,14 @@
       "fat": 0.4,
       "carbohydrates": 15,
       "fiber": 1.6,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 24,
     "quantityType": [
@@ -520,8 +604,14 @@
       "fat": 0.3,
       "carbohydrates": 9.5,
       "fiber": 1.5,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 58,
     "quantityType": [
@@ -556,8 +646,14 @@
       "fat": 0.1,
       "carbohydrates": 15.2,
       "fiber": 3.1,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 75,
     "quantityType": [
@@ -592,8 +688,14 @@
       "fat": 0.2,
       "carbohydrates": 8,
       "fiber": 0.4,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 80,
     "quantityType": [
@@ -628,8 +730,14 @@
       "fat": 0.1,
       "carbohydrates": 3.6,
       "fiber": 0.5,
-      "vitamins": ["Vitamin K", "Vitamin C"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 98,
     "quantityType": [
@@ -664,8 +772,14 @@
       "fat": 0.2,
       "carbohydrates": 2.9,
       "fiber": 1.3,
-      "vitamins": ["Vitamin K", "Vitamin A"],
-      "minerals": ["Potassium", "Iron"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Iron"
+      ]
     },
     "quantity": 27,
     "quantityType": [
@@ -700,8 +814,14 @@
       "fat": 0.2,
       "carbohydrates": 3,
       "fiber": 1.6,
-      "vitamins": ["Vitamin K", "Vitamin C"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 20,
     "quantityType": [
@@ -736,8 +856,14 @@
       "fat": 0.3,
       "carbohydrates": 6,
       "fiber": 2.1,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Folate"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Folate"
+      ]
     },
     "quantity": 77,
     "quantityType": [
@@ -772,8 +898,14 @@
       "fat": 0.3,
       "carbohydrates": 3.1,
       "fiber": 1,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 95,
     "quantityType": [
@@ -808,8 +940,14 @@
       "fat": 0.1,
       "carbohydrates": 6.5,
       "fiber": 0.5,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 46,
     "quantityType": [
@@ -844,8 +982,14 @@
       "fat": 0.1,
       "carbohydrates": 7,
       "fiber": 1.2,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 11,
     "quantityType": [
@@ -880,8 +1024,14 @@
       "fat": 0.9,
       "carbohydrates": 8.8,
       "fiber": 3.6,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 67,
     "quantityType": [
@@ -916,8 +1066,14 @@
       "fat": 0.3,
       "carbohydrates": 5.3,
       "fiber": 2.5,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 12,
     "quantityType": [
@@ -952,8 +1108,14 @@
       "fat": 0.3,
       "carbohydrates": 8.9,
       "fiber": 3.8,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Potassium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Iron"
+      ]
     },
     "quantity": 86,
     "quantityType": [
@@ -988,8 +1150,14 @@
       "fat": 0.1,
       "carbohydrates": 3.9,
       "fiber": 2.1,
-      "vitamins": ["Vitamin K", "Vitamin A"],
-      "minerals": ["Potassium", "Iron"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Iron"
+      ]
     },
     "quantity": 20,
     "quantityType": [
@@ -1024,8 +1192,14 @@
       "fat": 0.1,
       "carbohydrates": 3.4,
       "fiber": 1.6,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 32,
     "quantityType": [
@@ -1060,8 +1234,14 @@
       "fat": 0.2,
       "carbohydrates": 9.6,
       "fiber": 2.8,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Iron"
+      ]
     },
     "quantity": 7,
     "quantityType": [
@@ -1096,8 +1276,14 @@
       "fat": 0.4,
       "carbohydrates": 9,
       "fiber": 1.5,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Iron"
+      ]
     },
     "quantity": 57,
     "quantityType": [
@@ -1132,8 +1318,14 @@
       "fat": 0.8,
       "carbohydrates": 17.8,
       "fiber": 2,
-      "vitamins": ["Vitamin B6", "Vitamin C"],
-      "minerals": ["Magnesium", "Manganese"]
+      "vitamins": [
+        "Vitamin B6",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Manganese"
+      ]
     },
     "quantity": 48,
     "quantityType": [
@@ -1168,8 +1360,12 @@
       "fat": 0.3,
       "carbohydrates": 9.3,
       "fiber": 2.8,
-      "vitamins": ["Vitamin C"],
-      "minerals": ["Potassium"]
+      "vitamins": [
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium"
+      ]
     },
     "quantity": 36,
     "quantityType": [
@@ -1204,8 +1400,13 @@
       "fat": 0.2,
       "carbohydrates": 10.5,
       "fiber": 2.8,
-      "vitamins": ["Vitamin C"],
-      "minerals": ["Calcium", "Potassium"]
+      "vitamins": [
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Potassium"
+      ]
     },
     "quantity": 69,
     "quantityType": [
@@ -1240,8 +1441,13 @@
       "fat": 0.1,
       "carbohydrates": 12,
       "fiber": 2.4,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium"
+      ]
     },
     "quantity": 80,
     "quantityType": [
@@ -1276,8 +1482,13 @@
       "fat": 0.1,
       "carbohydrates": 10.7,
       "fiber": 1.6,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium"
+      ]
     },
     "quantity": 67,
     "quantityType": [
@@ -1312,8 +1523,14 @@
       "fat": 0.5,
       "carbohydrates": 14.7,
       "fiber": 3,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 23,
     "quantityType": [
@@ -1348,8 +1565,14 @@
       "fat": 0.3,
       "carbohydrates": 11,
       "fiber": 1.7,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 25,
     "quantityType": [
@@ -1384,8 +1607,14 @@
       "fat": 0.1,
       "carbohydrates": 5.8,
       "fiber": 2.5,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 98,
     "quantityType": [
@@ -1420,8 +1649,14 @@
       "fat": 0.1,
       "carbohydrates": 6.4,
       "fiber": 1.8,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 68,
     "quantityType": [
@@ -1456,8 +1691,14 @@
       "fat": 0.1,
       "carbohydrates": 20.1,
       "fiber": 3,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Potassium", "Manganese"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Manganese"
+      ]
     },
     "quantity": 12,
     "quantityType": [
@@ -1492,8 +1733,14 @@
       "fat": 0.1,
       "carbohydrates": 12,
       "fiber": 2,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 83,
     "quantityType": [
@@ -1528,8 +1775,14 @@
       "fat": 0.2,
       "carbohydrates": 5.9,
       "fiber": 3,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 54,
     "quantityType": [
@@ -1564,8 +1817,14 @@
       "fat": 0.2,
       "carbohydrates": 7.3,
       "fiber": 3.1,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Manganese"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Manganese"
+      ]
     },
     "quantity": 18,
     "quantityType": [
@@ -1600,8 +1859,14 @@
       "fat": 0.2,
       "carbohydrates": 10.5,
       "fiber": 5.4,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Magnesium", "Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Potassium"
+      ]
     },
     "quantity": 51,
     "quantityType": [
@@ -1636,8 +1901,14 @@
       "fat": 0.3,
       "carbohydrates": 14.2,
       "fiber": 1.8,
-      "vitamins": ["Vitamin A", "Vitamin K"],
-      "minerals": ["Iron", "Manganese"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Iron",
+        "Manganese"
+      ]
     },
     "quantity": 42,
     "quantityType": [
@@ -1672,8 +1943,14 @@
       "fat": 0.1,
       "carbohydrates": 16.8,
       "fiber": 3.2,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Manganese"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Manganese"
+      ]
     },
     "quantity": 64,
     "quantityType": [
@@ -1708,8 +1985,14 @@
       "fat": 1.2,
       "carbohydrates": 19,
       "fiber": 2.7,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 4,
     "quantityType": [
@@ -1744,8 +2027,14 @@
       "fat": 0.4,
       "carbohydrates": 14.4,
       "fiber": 5.7,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Iron", "Manganese"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Iron",
+        "Manganese"
+      ]
     },
     "quantity": 19,
     "quantityType": [
@@ -1780,8 +2069,14 @@
       "fat": 0.2,
       "carbohydrates": 7.1,
       "fiber": 3.4,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 68,
     "quantityType": [
@@ -1816,8 +2111,14 @@
       "fat": 2.6,
       "carbohydrates": 27.4,
       "fiber": 7.6,
-      "vitamins": ["Folate", "Vitamin B6"],
-      "minerals": ["Iron", "Magnesium"]
+      "vitamins": [
+        "Folate",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Iron",
+        "Magnesium"
+      ]
     },
     "quantity": 68,
     "quantityType": [
@@ -1852,8 +2153,14 @@
       "fat": 0.4,
       "carbohydrates": 20.1,
       "fiber": 7.9,
-      "vitamins": ["Folate", "Vitamin B6"],
-      "minerals": ["Iron", "Potassium"]
+      "vitamins": [
+        "Folate",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Iron",
+        "Potassium"
+      ]
     },
     "quantity": 70,
     "quantityType": [
@@ -1888,8 +2195,14 @@
       "fat": 0.7,
       "carbohydrates": 11.9,
       "fiber": 6.5,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Manganese", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Manganese",
+        "Magnesium"
+      ]
     },
     "quantity": 54,
     "quantityType": [
@@ -1924,8 +2237,14 @@
       "fat": 0.5,
       "carbohydrates": 9.6,
       "fiber": 5.3,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Manganese", "Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Manganese",
+        "Potassium"
+      ]
     },
     "quantity": 48,
     "quantityType": [
@@ -1960,8 +2279,14 @@
       "fat": 0.1,
       "carbohydrates": 12,
       "fiber": 3.6,
-      "vitamins": ["Vitamin C", "Vitamin E"],
-      "minerals": ["Manganese", "Copper"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin E"
+      ],
+      "minerals": [
+        "Manganese",
+        "Copper"
+      ]
     },
     "quantity": 8,
     "quantityType": [
@@ -1996,8 +2321,14 @@
       "fat": 0.6,
       "carbohydrates": 10.2,
       "fiber": 4.3,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 46,
     "quantityType": [
@@ -2032,8 +2363,14 @@
       "fat": 0.4,
       "carbohydrates": 9.8,
       "fiber": 1.7,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Iron", "Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Iron",
+        "Potassium"
+      ]
     },
     "quantity": 23,
     "quantityType": [
@@ -2068,8 +2405,14 @@
       "fat": 0.4,
       "carbohydrates": 11.1,
       "fiber": 2,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 76,
     "quantityType": [
@@ -2104,8 +2447,14 @@
       "fat": 0.3,
       "carbohydrates": 11.4,
       "fiber": 1.4,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 9,
     "quantityType": [
@@ -2140,8 +2489,14 @@
       "fat": 0.2,
       "carbohydrates": 18.1,
       "fiber": 0.9,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Potassium", "Copper"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Copper"
+      ]
     },
     "quantity": 27,
     "quantityType": [
@@ -2176,8 +2531,14 @@
       "fat": 0.3,
       "carbohydrates": 19.2,
       "fiber": 2.9,
-      "vitamins": ["Vitamin K", "Vitamin B6"],
-      "minerals": ["Magnesium", "Potassium"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Potassium"
+      ]
     },
     "quantity": 19,
     "quantityType": [
@@ -2212,8 +2573,14 @@
       "fat": 0.4,
       "carbohydrates": 75,
       "fiber": 8,
-      "vitamins": ["Vitamin B6", "Niacin"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin B6",
+        "Niacin"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 83,
     "quantityType": [
@@ -2248,8 +2615,14 @@
       "fat": 1.2,
       "carbohydrates": 19,
       "fiber": 4,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Copper"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Copper"
+      ]
     },
     "quantity": 62,
     "quantityType": [
@@ -2284,8 +2657,14 @@
       "fat": 0.2,
       "carbohydrates": 8.2,
       "fiber": 0.9,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 74,
     "quantityType": [
@@ -2320,8 +2699,14 @@
       "fat": 0.1,
       "carbohydrates": 9.1,
       "fiber": 0.8,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Copper"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Copper"
+      ]
     },
     "quantity": 62,
     "quantityType": [
@@ -2356,8 +2741,14 @@
       "fat": 33.5,
       "carbohydrates": 15.2,
       "fiber": 9,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Iron", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Iron",
+        "Magnesium"
+      ]
     },
     "quantity": 83,
     "quantityType": [
@@ -2392,8 +2783,14 @@
       "fat": 10.7,
       "carbohydrates": 6.3,
       "fiber": 3.2,
-      "vitamins": ["Vitamin E", "Vitamin A"],
-      "minerals": ["Iron", "Calcium"]
+      "vitamins": [
+        "Vitamin E",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Iron",
+        "Calcium"
+      ]
     },
     "quantity": 30,
     "quantityType": [
@@ -2428,8 +2825,14 @@
       "fat": 1.4,
       "carbohydrates": 28,
       "fiber": 3,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 62,
     "quantityType": [
@@ -2464,8 +2867,14 @@
       "fat": 65,
       "carbohydrates": 13.7,
       "fiber": 6.7,
-      "vitamins": ["Vitamin B6", "Folate"],
-      "minerals": ["Magnesium", "Potassium"]
+      "vitamins": [
+        "Vitamin B6",
+        "Folate"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Potassium"
+      ]
     },
     "quantity": 41,
     "quantityType": [
@@ -2500,8 +2909,14 @@
       "fat": 49.9,
       "carbohydrates": 21.6,
       "fiber": 12.5,
-      "vitamins": ["Vitamin E", "Riboflavin"],
-      "minerals": ["Magnesium", "Calcium"]
+      "vitamins": [
+        "Vitamin E",
+        "Riboflavin"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Calcium"
+      ]
     },
     "quantity": 39,
     "quantityType": [
@@ -2536,8 +2951,14 @@
       "fat": 61,
       "carbohydrates": 17,
       "fiber": 9.7,
-      "vitamins": ["Vitamin E", "Vitamin B6"],
-      "minerals": ["Magnesium", "Copper"]
+      "vitamins": [
+        "Vitamin E",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Copper"
+      ]
     },
     "quantity": 63,
     "quantityType": [
@@ -2572,8 +2993,14 @@
       "fat": 45.3,
       "carbohydrates": 28,
       "fiber": 10.3,
-      "vitamins": ["Vitamin B6", "Thiamine"],
-      "minerals": ["Potassium", "Phosphorus"]
+      "vitamins": [
+        "Vitamin B6",
+        "Thiamine"
+      ],
+      "minerals": [
+        "Potassium",
+        "Phosphorus"
+      ]
     },
     "quantity": 37,
     "quantityType": [
@@ -2608,8 +3035,14 @@
       "fat": 43.9,
       "carbohydrates": 30.2,
       "fiber": 3.3,
-      "vitamins": ["Vitamin B6", "Vitamin K"],
-      "minerals": ["Magnesium", "Copper"]
+      "vitamins": [
+        "Vitamin B6",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Copper"
+      ]
     },
     "quantity": 30,
     "quantityType": [
@@ -2644,8 +3077,14 @@
       "fat": 75.8,
       "carbohydrates": 13.8,
       "fiber": 8.6,
-      "vitamins": ["Thiamine", "Vitamin B6"],
-      "minerals": ["Magnesium", "Iron"]
+      "vitamins": [
+        "Thiamine",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Iron"
+      ]
     },
     "quantity": 33,
     "quantityType": [
@@ -2680,8 +3119,14 @@
       "fat": 0.3,
       "carbohydrates": 13.3,
       "fiber": 1.8,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 95,
     "quantityType": [
@@ -2716,8 +3161,14 @@
       "fat": 0.1,
       "carbohydrates": 12,
       "fiber": 1.7,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 84,
     "quantityType": [
@@ -2752,8 +3203,14 @@
       "fat": 0.2,
       "carbohydrates": 13.1,
       "fiber": 1.9,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 27,
     "quantityType": [
@@ -2790,8 +3247,14 @@
       "fat": 5.3,
       "carbohydrates": 27.1,
       "fiber": 3.8,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Iron"
+      ]
     },
     "quantity": 55,
     "quantityType": [
@@ -2826,8 +3289,14 @@
       "fat": 0.6,
       "carbohydrates": 23,
       "fiber": 1.5,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 4,
     "quantityType": [
@@ -2862,8 +3331,14 @@
       "fat": 0.2,
       "carbohydrates": 4.5,
       "fiber": 1.8,
-      "vitamins": ["Vitamin K", "Vitamin C"],
-      "minerals": ["Calcium", "Potassium"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Potassium"
+      ]
     },
     "quantity": 62,
     "quantityType": [
@@ -2898,8 +3373,14 @@
       "fat": 0.2,
       "carbohydrates": 2.2,
       "fiber": 1,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Potassium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Potassium"
+      ]
     },
     "quantity": 58,
     "quantityType": [
@@ -2934,8 +3415,14 @@
       "fat": 0.6,
       "carbohydrates": 6,
       "fiber": 4,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 99,
     "quantityType": [
@@ -2970,8 +3457,14 @@
       "fat": 0.2,
       "carbohydrates": 3.7,
       "fiber": 1.6,
-      "vitamins": ["Vitamin A", "Vitamin K"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 35,
     "quantityType": [
@@ -3006,8 +3499,14 @@
       "fat": 0.2,
       "carbohydrates": 3.4,
       "fiber": 3.1,
-      "vitamins": ["Vitamin A", "Vitamin K"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 54,
     "quantityType": [
@@ -3042,8 +3541,14 @@
       "fat": 0.2,
       "carbohydrates": 4.5,
       "fiber": 0.9,
-      "vitamins": ["Vitamin K", "Vitamin C"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 93,
     "quantityType": [
@@ -3078,8 +3583,14 @@
       "fat": 0.1,
       "carbohydrates": 1.3,
       "fiber": 0.5,
-      "vitamins": ["Vitamin K", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 91,
     "quantityType": [
@@ -3114,8 +3625,14 @@
       "fat": 0.7,
       "carbohydrates": 3.7,
       "fiber": 1.6,
-      "vitamins": ["Vitamin K", "Vitamin C"],
-      "minerals": ["Calcium", "Potassium"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Potassium"
+      ]
     },
     "quantity": 26,
     "quantityType": [
@@ -3150,8 +3667,14 @@
       "fat": 0.7,
       "carbohydrates": 9.2,
       "fiber": 3.5,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 34,
     "quantityType": [
@@ -3186,8 +3709,14 @@
       "fat": 0.2,
       "carbohydrates": 4.7,
       "fiber": 3.2,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 100,
     "quantityType": [
@@ -3224,8 +3753,14 @@
       "fat": 0.7,
       "carbohydrates": 3.2,
       "fiber": 2.9,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Iron", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Iron",
+        "Magnesium"
+      ]
     },
     "quantity": 35,
     "quantityType": [
@@ -3260,8 +3795,14 @@
       "fat": 0.2,
       "carbohydrates": 7.5,
       "fiber": 3.2,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Magnesium", "Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Potassium"
+      ]
     },
     "quantity": 10,
     "quantityType": [
@@ -3296,8 +3837,14 @@
       "fat": 0.8,
       "carbohydrates": 6.3,
       "fiber": 3.3,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Iron", "Potassium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Iron",
+        "Potassium"
+      ]
     },
     "quantity": 25,
     "quantityType": [
@@ -3332,8 +3879,14 @@
       "fat": 0.6,
       "carbohydrates": 2.7,
       "fiber": 1.6,
-      "vitamins": ["Vitamin A", "Vitamin K"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 81,
     "quantityType": [
@@ -3368,8 +3921,14 @@
       "fat": 0.6,
       "carbohydrates": 8.4,
       "fiber": 6.8,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Iron", "Potassium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Iron",
+        "Potassium"
+      ]
     },
     "quantity": 92,
     "quantityType": [
@@ -3404,8 +3963,14 @@
       "fat": 1.7,
       "carbohydrates": 24.5,
       "fiber": 14,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Iron", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Iron",
+        "Magnesium"
+      ]
     },
     "quantity": 88,
     "quantityType": [
@@ -3440,8 +4005,14 @@
       "fat": 10.3,
       "carbohydrates": 64.4,
       "fiber": 42,
-      "vitamins": ["Vitamin K", "Vitamin E"],
-      "minerals": ["Calcium", "Magnesium"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin E"
+      ],
+      "minerals": [
+        "Calcium",
+        "Magnesium"
+      ]
     },
     "quantity": 84,
     "quantityType": [
@@ -3476,8 +4047,14 @@
       "fat": 12.8,
       "carbohydrates": 60.7,
       "fiber": 40,
-      "vitamins": ["Vitamin K", "Vitamin A"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 97,
     "quantityType": [
@@ -3512,8 +4089,14 @@
       "fat": 5.9,
       "carbohydrates": 20.7,
       "fiber": 14.1,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 63,
     "quantityType": [
@@ -3548,8 +4131,14 @@
       "fat": 1.1,
       "carbohydrates": 7,
       "fiber": 2.1,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 87,
     "quantityType": [
@@ -3583,8 +4172,14 @@
       "fat": 7.2,
       "carbohydrates": 50,
       "fiber": 7.4,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 12,
     "quantityType": [
@@ -3619,8 +4214,14 @@
       "fat": 3.9,
       "carbohydrates": 49.1,
       "fiber": 11.3,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Calcium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Magnesium"
+      ]
     },
     "quantity": 81,
     "quantityType": [
@@ -3655,8 +4256,14 @@
       "fat": 0.5,
       "carbohydrates": 3.7,
       "fiber": 2.8,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 88,
     "quantityType": [
@@ -3691,8 +4298,14 @@
       "fat": 14.9,
       "carbohydrates": 52.3,
       "fiber": 39.8,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 84,
     "quantityType": [
@@ -3727,8 +4340,14 @@
       "fat": 14.6,
       "carbohydrates": 49.9,
       "fiber": 38,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Iron", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Iron",
+        "Calcium"
+      ]
     },
     "quantity": 67,
     "quantityType": [
@@ -3763,8 +4382,14 @@
       "fat": 22.3,
       "carbohydrates": 44.2,
       "fiber": 10.5,
-      "vitamins": ["Vitamin C", "Vitamin E"],
-      "minerals": ["Iron", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin E"
+      ],
+      "minerals": [
+        "Iron",
+        "Magnesium"
+      ]
     },
     "quantity": 91,
     "quantityType": [
@@ -3799,8 +4424,14 @@
       "fat": 15.9,
       "carbohydrates": 50,
       "fiber": 14.6,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Iron", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Iron",
+        "Calcium"
+      ]
     },
     "quantity": 58,
     "quantityType": [
@@ -3835,8 +4466,14 @@
       "fat": 6.7,
       "carbohydrates": 68.5,
       "fiber": 28,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Magnesium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Iron"
+      ]
     },
     "quantity": 23,
     "quantityType": [
@@ -3871,8 +4508,14 @@
       "fat": 13,
       "carbohydrates": 65.5,
       "fiber": 33.9,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 16,
     "quantityType": [
@@ -3907,8 +4550,14 @@
       "fat": 0.1,
       "carbohydrates": 12.6,
       "fiber": 0,
-      "vitamins": ["Vitamin B2", "Niacin"],
-      "minerals": ["Calcium", "Magnesium"]
+      "vitamins": [
+        "Vitamin B2",
+        "Niacin"
+      ],
+      "minerals": [
+        "Calcium",
+        "Magnesium"
+      ]
     },
     "quantity": 84,
     "quantityType": [
@@ -3943,8 +4592,14 @@
       "fat": 1.2,
       "carbohydrates": 81,
       "fiber": 53,
-      "vitamins": ["Vitamin K", "Vitamin A"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 89,
     "quantityType": [
@@ -3979,8 +4634,14 @@
       "fat": 8.4,
       "carbohydrates": 75,
       "fiber": 26.3,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Iron", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Iron",
+        "Calcium"
+      ]
     },
     "quantity": 99,
     "quantityType": [
@@ -4015,8 +4676,14 @@
       "fat": 0.7,
       "carbohydrates": 4.4,
       "fiber": 2.5,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 54,
     "quantityType": [
@@ -4051,8 +4718,14 @@
       "fat": 7,
       "carbohydrates": 60.6,
       "fiber": 40.3,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 56,
     "quantityType": [
@@ -4087,8 +4760,14 @@
       "fat": 1,
       "carbohydrates": 9,
       "fiber": 5.2,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 54,
     "quantityType": [
@@ -4123,8 +4802,14 @@
       "fat": 0.9,
       "carbohydrates": 15.6,
       "fiber": 8,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Magnesium"
+      ]
     },
     "quantity": 80,
     "quantityType": [
@@ -4159,8 +4844,14 @@
       "fat": 0.7,
       "carbohydrates": 8.4,
       "fiber": 6.8,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 72,
     "quantityType": [
@@ -4195,8 +4886,14 @@
       "fat": 0.5,
       "carbohydrates": 25.3,
       "fiber": 4.2,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Iron", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Iron",
+        "Magnesium"
+      ]
     },
     "quantity": 43,
     "quantityType": [
@@ -4231,8 +4928,14 @@
       "fat": 0.2,
       "carbohydrates": 17.3,
       "fiber": 2,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Iron"
+      ]
     },
     "quantity": 8,
     "quantityType": [
@@ -4267,8 +4970,14 @@
       "fat": 9.9,
       "carbohydrates": 65,
       "fiber": 21,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Iron", "Manganese"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Iron",
+        "Manganese"
+      ]
     },
     "quantity": 26,
     "quantityType": [
@@ -4303,8 +5012,14 @@
       "fat": 0.7,
       "carbohydrates": 11.3,
       "fiber": 3.3,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Calcium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Calcium",
+        "Magnesium"
+      ]
     },
     "quantity": 5,
     "quantityType": [
@@ -4339,8 +5054,14 @@
       "fat": 0.1,
       "carbohydrates": 9,
       "fiber": 4.9,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 83,
     "quantityType": [
@@ -4375,8 +5096,14 @@
       "fat": 0.1,
       "carbohydrates": 6.2,
       "fiber": 3.6,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 7,
     "quantityType": [
@@ -4411,8 +5138,14 @@
       "fat": 0.1,
       "carbohydrates": 4,
       "fiber": 1.6,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 61,
     "quantityType": [
@@ -4447,8 +5180,14 @@
       "fat": 0.3,
       "carbohydrates": 18,
       "fiber": 4.9,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 24,
     "quantityType": [
@@ -4483,8 +5222,14 @@
       "fat": 0.3,
       "carbohydrates": 38.1,
       "fiber": 1.8,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 18,
     "quantityType": [
@@ -4519,8 +5264,14 @@
       "fat": 0.1,
       "carbohydrates": 17.4,
       "fiber": 1.6,
-      "vitamins": ["Vitamin C", "Thiamine"],
-      "minerals": ["Iron", "Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Thiamine"
+      ],
+      "minerals": [
+        "Iron",
+        "Potassium"
+      ]
     },
     "quantity": 83,
     "quantityType": [
@@ -4555,8 +5306,14 @@
       "fat": 0.1,
       "carbohydrates": 17.4,
       "fiber": 1.6,
-      "vitamins": ["Vitamin C", "Thiamine"],
-      "minerals": ["Iron", "Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Thiamine"
+      ],
+      "minerals": [
+        "Iron",
+        "Potassium"
+      ]
     },
     "quantity": 73,
     "quantityType": [
@@ -4591,8 +5348,14 @@
       "fat": 0.1,
       "carbohydrates": 17.2,
       "fiber": 4.9,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 58,
     "quantityType": [
@@ -4627,8 +5390,14 @@
       "fat": 0.3,
       "carbohydrates": 5.2,
       "fiber": 2.2,
-      "vitamins": ["Vitamin B6", "Thiamine"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin B6",
+        "Thiamine"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 83,
     "quantityType": [
@@ -4663,8 +5432,14 @@
       "fat": 0.3,
       "carbohydrates": 3.3,
       "fiber": 1,
-      "vitamins": ["Vitamin D", "Vitamin B6"],
-      "minerals": ["Potassium", "Phosphorus"]
+      "vitamins": [
+        "Vitamin D",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Phosphorus"
+      ]
     },
     "quantity": 52,
     "quantityType": [
@@ -4699,8 +5474,14 @@
       "fat": 2,
       "carbohydrates": 73,
       "fiber": 0,
-      "vitamins": ["Vitamin D", "Vitamin C"],
-      "minerals": ["Calcium", "Magnesium"]
+      "vitamins": [
+        "Vitamin D",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Magnesium"
+      ]
     },
     "quantity": 4,
     "quantityType": [
@@ -4735,8 +5516,14 @@
       "fat": 0.5,
       "carbohydrates": 9.6,
       "fiber": 4,
-      "vitamins": ["Vitamin K", "Vitamin B12"],
-      "minerals": ["Iodine", "Magnesium"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin B12"
+      ],
+      "minerals": [
+        "Iodine",
+        "Magnesium"
+      ]
     },
     "quantity": 25,
     "quantityType": [
@@ -4771,8 +5558,14 @@
       "fat": 0.3,
       "carbohydrates": 5.1,
       "fiber": 0.3,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Iodine", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Iodine",
+        "Magnesium"
+      ]
     },
     "quantity": 56,
     "quantityType": [
@@ -4807,8 +5600,14 @@
       "fat": 0.3,
       "carbohydrates": 3.3,
       "fiber": 0.5,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Iodine", "Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Iodine",
+        "Potassium"
+      ]
     },
     "quantity": 19,
     "quantityType": [
@@ -4843,8 +5642,14 @@
       "fat": 0.6,
       "carbohydrates": 9.6,
       "fiber": 1.3,
-      "vitamins": ["Vitamin K", "Folate"],
-      "minerals": ["Iodine", "Iron"]
+      "vitamins": [
+        "Vitamin K",
+        "Folate"
+      ],
+      "minerals": [
+        "Iodine",
+        "Iron"
+      ]
     },
     "quantity": 37,
     "quantityType": [
@@ -4879,8 +5684,14 @@
       "fat": 7.7,
       "carbohydrates": 23.9,
       "fiber": 3.6,
-      "vitamins": ["Vitamin B12", "Vitamin A"],
-      "minerals": ["Iron", "Calcium"]
+      "vitamins": [
+        "Vitamin B12",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Iron",
+        "Calcium"
+      ]
     },
     "quantity": 95,
     "quantityType": [
@@ -4915,8 +5726,14 @@
       "fat": 0.7,
       "carbohydrates": 2.1,
       "fiber": 1.9,
-      "vitamins": ["Vitamin K", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 98,
     "quantityType": [
@@ -4951,8 +5768,14 @@
       "fat": 0.1,
       "carbohydrates": 6,
       "fiber": 2,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 80,
     "quantityType": [
@@ -4987,8 +5810,14 @@
       "fat": 0.5,
       "carbohydrates": 3.1,
       "fiber": 2,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 88,
     "quantityType": [
@@ -5023,8 +5852,14 @@
       "fat": 0.5,
       "carbohydrates": 3.1,
       "fiber": 2,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 72,
     "quantityType": [
@@ -5059,8 +5894,14 @@
       "fat": 0.2,
       "carbohydrates": 7.3,
       "fiber": 2.6,
-      "vitamins": ["Vitamin A", "Vitamin K"],
-      "minerals": ["Calcium", "Potassium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Calcium",
+        "Potassium"
+      ]
     },
     "quantity": 97,
     "quantityType": [
@@ -5092,8 +5933,14 @@
       "fat": 0.2,
       "carbohydrates": 7.3,
       "fiber": 2.6,
-      "vitamins": ["Vitamin A", "Vitamin K"],
-      "minerals": ["Calcium", "Potassium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Calcium",
+        "Potassium"
+      ]
     },
     "quantity": 97,
     "quantityType": [
@@ -5128,8 +5975,14 @@
       "fat": 0.2,
       "carbohydrates": 3.7,
       "fiber": 1.6,
-      "vitamins": ["Vitamin A", "Vitamin K"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 42,
     "quantityType": [
@@ -5164,8 +6017,14 @@
       "fat": 0.1,
       "carbohydrates": 3.4,
       "fiber": 1.5,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Magnesium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Magnesium",
+        "Calcium"
+      ]
     },
     "quantity": 10,
     "quantityType": [
@@ -5200,8 +6059,14 @@
       "fat": 0.4,
       "carbohydrates": 5.7,
       "fiber": 3,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Iron", "Calcium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Iron",
+        "Calcium"
+      ]
     },
     "quantity": 38,
     "quantityType": [
@@ -5236,8 +6101,14 @@
       "fat": 0.3,
       "carbohydrates": 3.3,
       "fiber": 2.1,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 80,
     "quantityType": [
@@ -5272,8 +6143,14 @@
       "fat": 0.1,
       "carbohydrates": 3,
       "fiber": 1.2,
-      "vitamins": ["Vitamin K", "Vitamin A"],
-      "minerals": ["Calcium", "Potassium"]
+      "vitamins": [
+        "Vitamin K",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Potassium"
+      ]
     },
     "quantity": 8,
     "quantityType": [
@@ -5308,8 +6185,14 @@
       "fat": 0.2,
       "carbohydrates": 2.3,
       "fiber": 1,
-      "vitamins": ["Vitamin A", "Vitamin K"],
-      "minerals": ["Calcium", "Potassium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Calcium",
+        "Potassium"
+      ]
     },
     "quantity": 81,
     "quantityType": [
@@ -5344,8 +6227,14 @@
       "fat": 0.4,
       "carbohydrates": 3,
       "fiber": 1.8,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 43,
     "quantityType": [
@@ -5380,8 +6269,14 @@
       "fat": 0.2,
       "carbohydrates": 2.5,
       "fiber": 1,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 90,
     "quantityType": [
@@ -5416,8 +6311,14 @@
       "fat": 0.5,
       "carbohydrates": 4,
       "fiber": 1.2,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 27,
     "quantityType": [
@@ -5452,8 +6353,14 @@
       "fat": 0.2,
       "carbohydrates": 18,
       "fiber": 3,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 88,
     "quantityType": [
@@ -5488,8 +6395,14 @@
       "fat": 0.1,
       "carbohydrates": 20.5,
       "fiber": 2,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 47,
     "quantityType": [
@@ -5524,8 +6437,14 @@
       "fat": 0.2,
       "carbohydrates": 28,
       "fiber": 4,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 5,
     "quantityType": [
@@ -5560,8 +6479,14 @@
       "fat": 0.1,
       "carbohydrates": 4.5,
       "fiber": 1.5,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 96,
     "quantityType": [
@@ -5596,8 +6521,14 @@
       "fat": 0.7,
       "carbohydrates": 5.5,
       "fiber": 1.9,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Potassium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Potassium"
+      ]
     },
     "quantity": 60,
     "quantityType": [
@@ -5632,8 +6563,14 @@
       "fat": 0.2,
       "carbohydrates": 3.3,
       "fiber": 2.2,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Calcium", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Calcium",
+        "Magnesium"
+      ]
     },
     "quantity": 48,
     "quantityType": [
@@ -5668,8 +6605,14 @@
       "fat": 0.1,
       "carbohydrates": 4,
       "fiber": 0.5,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 23,
     "quantityType": [
@@ -5704,8 +6647,14 @@
       "fat": 0.1,
       "carbohydrates": 20,
       "fiber": 2,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 9,
     "quantityType": [
@@ -5740,8 +6689,14 @@
       "fat": 0.2,
       "carbohydrates": 21,
       "fiber": 6,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Potassium", "Manganese"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Manganese"
+      ]
     },
     "quantity": 58,
     "quantityType": [
@@ -5776,8 +6731,14 @@
       "fat": 0.3,
       "carbohydrates": 7,
       "fiber": 2.8,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 42,
     "quantityType": [
@@ -5812,8 +6773,14 @@
       "fat": 0.1,
       "carbohydrates": 13,
       "fiber": 3,
-      "vitamins": ["Vitamin C", "Magnesium"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Magnesium"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 20,
     "quantityType": [
@@ -5848,8 +6815,14 @@
       "fat": 0.4,
       "carbohydrates": 16.5,
       "fiber": 1.3,
-      "vitamins": ["Vitamin C", "Copper"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Copper"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 30,
     "quantityType": [
@@ -5884,8 +6857,14 @@
       "fat": 0.1,
       "carbohydrates": 15,
       "fiber": 1.1,
-      "vitamins": ["Vitamin C", "Copper"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Copper"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 5,
     "quantityType": [
@@ -5920,8 +6899,14 @@
       "fat": 0.2,
       "carbohydrates": 16.5,
       "fiber": 0.9,
-      "vitamins": ["Vitamin C", "Copper"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Copper"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 69,
     "quantityType": [
@@ -5956,8 +6941,14 @@
       "fat": 0.6,
       "carbohydrates": 18,
       "fiber": 1.8,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 83,
     "quantityType": [
@@ -5989,8 +6980,14 @@
       "fat": 0.7,
       "carbohydrates": 23.4,
       "fiber": 10.4,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 36,
     "quantityType": [
@@ -6025,8 +7022,14 @@
       "fat": 0.3,
       "carbohydrates": 7.7,
       "fiber": 1,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 82,
     "quantityType": [
@@ -6061,8 +7064,14 @@
       "fat": 0.6,
       "carbohydrates": 62.5,
       "fiber": 5.1,
-      "vitamins": ["Vitamin C", "Vitamin B1"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B1"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 50,
     "quantityType": [
@@ -6097,8 +7106,14 @@
       "fat": 1,
       "carbohydrates": 14.3,
       "fiber": 5.4,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 64,
     "quantityType": [
@@ -6133,8 +7148,14 @@
       "fat": 0.1,
       "carbohydrates": 15.3,
       "fiber": 1.9,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 7,
     "quantityType": [
@@ -6169,8 +7190,14 @@
       "fat": 0.5,
       "carbohydrates": 9.6,
       "fiber": 3.6,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Calcium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Magnesium"
+      ]
     },
     "quantity": 54,
     "quantityType": [
@@ -6205,8 +7232,14 @@
       "fat": 0.4,
       "carbohydrates": 11,
       "fiber": 3,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 15,
     "quantityType": [
@@ -6241,8 +7274,14 @@
       "fat": 0.1,
       "carbohydrates": 15,
       "fiber": 2.3,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 7,
     "quantityType": [
@@ -6277,8 +7316,14 @@
       "fat": 15.2,
       "carbohydrates": 3.7,
       "fiber": 1.6,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 53,
     "quantityType": [
@@ -6313,8 +7358,14 @@
       "fat": 0.3,
       "carbohydrates": 27.1,
       "fiber": 4.9,
-      "vitamins": ["Vitamin C", "Thiamine"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin C",
+        "Thiamine"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 11,
     "quantityType": [
@@ -6349,8 +7400,14 @@
       "fat": 0.4,
       "carbohydrates": 31.9,
       "fiber": 2.3,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 16,
     "quantityType": [
@@ -6385,8 +7442,14 @@
       "fat": 0,
       "carbohydrates": 73,
       "fiber": 0.1,
-      "vitamins": ["Vitamin C", "Folate"],
-      "minerals": ["Calcium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Folate"
+      ],
+      "minerals": [
+        "Calcium",
+        "Iron"
+      ]
     },
     "quantity": 15,
     "quantityType": [
@@ -6421,8 +7484,14 @@
       "fat": 0.9,
       "carbohydrates": 16,
       "fiber": 6.5,
-      "vitamins": ["Vitamin C", "Vitamin A"],
-      "minerals": ["Calcium", "Potassium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin A"
+      ],
+      "minerals": [
+        "Calcium",
+        "Potassium"
+      ]
     },
     "quantity": 22,
     "quantityType": [
@@ -6457,8 +7526,14 @@
       "fat": 0.2,
       "carbohydrates": 12.1,
       "fiber": 1.7,
-      "vitamins": ["Vitamin A", "Vitamin C"],
-      "minerals": ["Potassium", "Magnesium"]
+      "vitamins": [
+        "Vitamin A",
+        "Vitamin C"
+      ],
+      "minerals": [
+        "Potassium",
+        "Magnesium"
+      ]
     },
     "quantity": 99,
     "quantityType": [
@@ -6493,8 +7568,14 @@
       "fat": 0.2,
       "carbohydrates": 20,
       "fiber": 3.6,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Iron"
+      ]
     },
     "quantity": 74,
     "quantityType": [
@@ -6529,8 +7610,14 @@
       "fat": 0.2,
       "carbohydrates": 11.2,
       "fiber": 1.8,
-      "vitamins": ["Vitamin C", "Vitamin B6"],
-      "minerals": ["Potassium", "Calcium"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin B6"
+      ],
+      "minerals": [
+        "Potassium",
+        "Calcium"
+      ]
     },
     "quantity": 11,
     "quantityType": [
@@ -6565,8 +7652,14 @@
       "fat": 0.4,
       "carbohydrates": 9.8,
       "fiber": 1.7,
-      "vitamins": ["Vitamin C", "Vitamin K"],
-      "minerals": ["Potassium", "Iron"]
+      "vitamins": [
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "minerals": [
+        "Potassium",
+        "Iron"
+      ]
     },
     "quantity": 41,
     "quantityType": [

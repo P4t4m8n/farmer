@@ -17,7 +17,7 @@ declare interface IProduct extends IEntity {
   vitamins?: string[];
   minerals?: string[];
   quantity?: number;
-  quantityType?: Array<TQuantityType>;
+  quantityType?: TQuantityType[];
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -92,3 +92,8 @@ declare const QUANTITY_TYPE = [
   " bunch",
 ] as const;
 declare type TQuantityType = (typeof QUANTITY_TYPE)[number];
+
+declare interface IQuantityType {
+  type: TQuantityType;
+  price: number;
+}

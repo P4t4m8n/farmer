@@ -5,7 +5,7 @@ export const APP_NAV_LINKS: {
 }[] = [
   {
     text: "Vegetables",
-    href: "/products/vegetables",
+    href: "/products/vegetable",
     icon: "vegetable",
   },
   {

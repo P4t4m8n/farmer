@@ -113,9 +113,12 @@ const productSchema: Schema<IProductModel> = new Schema(
     quantity: { type: Number, required: true, min: 0 },
     quantityType: [
       {
-        type: String,
-        enum: ["lb", "oz", "g", "kg", "unit"],
-        default: "unit",
+        price: { type: Number, required: true, min: 0 },
+        type: {
+          type: String,
+          enum: ["lb", "oz", "g", "kg", "unit"],
+          default: "unit",
+        },
       },
     ],
   },

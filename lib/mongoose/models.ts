@@ -28,10 +28,11 @@ export interface IProductModel extends Document {
   quantity: number;
   discount?: number;
   rating?: number;
-  quantityType: Array<TQuantityType>;
+  quantityType: IQuantityType[];
   createdAt?: Date;
   updatedAt?: Date;
 }
+
 
 interface INutrition {
   calories?: number;
