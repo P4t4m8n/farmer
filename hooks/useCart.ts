@@ -7,7 +7,7 @@ export const useCart = () => {
   if (!context) {
     throw new Error("useCart must be used within a CartProvider");
   }
-  const { getAllCartItems, updateCart, subscribe } = context;
+  const { getAllCartItems, updateCart, subscribe,clearCart } = context;
 
   const [cartItems, setCartItems] = useState(() => getAllCartItems());
 
@@ -22,5 +22,5 @@ export const useCart = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { cartItems, updateCart };
+  return { cartItems, updateCart ,clearCart};
 };

@@ -10,6 +10,8 @@ export default {
     extend: {
       colors: {
         white: "#ededed",
+        "black-1": "#0a0a0a",
+        "black-2": "#171717"
       },
       backgroundImage: {
         "header-gradient":
@@ -19,6 +21,9 @@ export default {
       fontFamily: {
         title: ["var(--font-alegreya)", "serif"],
         text: ["var(--font-lora)", "serif"],
+      },
+      boxShadow: {
+        model: "0px 10px 3000px 1500px rgba(0, 0, 0, 0.5)",
       },
     },
   },

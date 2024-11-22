@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0  w-full  z-40 h-32  p-4  justify-between flex items-end shadow">
+      <header className="fixed bg-inherit top-0 left-0  w-full  z-40 h-32  p-4  justify-between flex items-end shadow">
         <Logo />
         <AppNav />
         <Cart />
