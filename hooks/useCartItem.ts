@@ -1,6 +1,6 @@
-'use client'
+"use client";
 import { useContext, useEffect, useState } from "react";
-import { CartContext } from "@/lib/context/CartContext";
+import { CartContext } from "@/context/CartContext";
 
 export const useCartItem = (productId: string) => {
   const context = useContext(CartContext);

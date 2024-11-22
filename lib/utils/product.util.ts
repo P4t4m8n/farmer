@@ -2,7 +2,7 @@ import {
   VEG_SUB_PRODUCT_TYPE,
   FRUIT_SUB_PRODUCT_TYPE,
   LEGUME_SUB_PRODUCT_TYPE,
-} from "../constants/subTypes";
+} from "../../constants/subTypes";
 
 const getProductSubList = (type: TProductType): string[] => {
   switch (type) {

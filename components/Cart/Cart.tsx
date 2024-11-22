@@ -1,10 +1,10 @@
 "use client";
 
-import { useCart } from "../hooks/useCart";
+import { useCart } from "../../hooks/useCart";
 import { BasketSvg } from "../Icons/Icons";
 
 const Cart = () => {
-  const { cartItems, updateCart } = useCart();
+  const { cartItems } = useCart();
 
   return (
     <button className="w-12 h-12 relative">

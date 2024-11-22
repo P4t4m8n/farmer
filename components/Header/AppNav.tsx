@@ -1,4 +1,4 @@
-import { APP_NAV_LINKS } from "@/lib/constants/NavLinks";
+import { APP_NAV_LINKS } from "@/constants/NavLinks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getSVGByName } from "../Icons/Icons";

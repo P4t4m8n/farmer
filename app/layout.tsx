@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Alegreya, Playfair_Display, Lora } from "next/font/google";
 
 import "./globals.css";
-import { AppProvider } from "@/lib/context/AppProvider";
+import { AppProvider } from "@/context/AppProvider";
 
 const alegreya = Alegreya({
   subsets: ["latin", "cyrillic"],

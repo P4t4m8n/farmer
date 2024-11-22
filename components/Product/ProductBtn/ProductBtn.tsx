@@ -1,6 +1,6 @@
 "use client";
 
-import { useCartItem } from "@/components/hooks/useCartItem";
+import { useCartItem } from "@/hooks/useCartItem";
 import { MinusSvg, PlusSvg } from "@/components/Icons/Icons";
 import { memo, useCallback, useEffect, useState } from "react";
 
@@ -9,7 +9,7 @@ interface Props {
 }
 const ProductBtn = memo(function ProductBtn({ productSmall }: Props) {
   const productId = productSmall._id!;
-  
+
   const { cartItem, updateCart } = useCartItem(productId);
 
   const [quantityType, setQuantityType] = useState<
