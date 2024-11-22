@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Alegreya, Playfair_Display, Lora } from "next/font/google";
 
 import "./globals.css";
+import { AppProvider } from "@/lib/context/AppProvider";
 
 const alegreya = Alegreya({
   subsets: ["latin", "cyrillic"],
@@ -31,13 +32,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
     <html lang="en">
       <body
         className={`${alegreya.variable} ${playfairDisplay.variable} ${lora.variable} relative antialiased  overflow-hidden overflow-y-scroll scrollbar scrollbar-thumb-rounded scrollbar-thumb-gray-500 scrollbar-track-gray-200`}
       >
-        {children}
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );

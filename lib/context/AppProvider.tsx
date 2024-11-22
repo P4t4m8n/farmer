@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { CartProvider } from "./CartContext";
-import { AuthProvider } from "./authContext";
+import { AuthProvider } from "./AuthContext";
 
 interface Props {
   children: React.ReactNode;

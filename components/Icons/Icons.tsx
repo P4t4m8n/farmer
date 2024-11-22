@@ -18,30 +18,28 @@ export const LogoSvg = ({ style }: { style: string }) => {
 
 export const PlusSvg = () => {
   return (
-    <svg viewBox="0 0 24 24" className=" w-full h-full  stroke-main fill-main">
-      <g>
-        <path
-          d="M4 12H20M12 4V20"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        ></path>
-      </g>
+    <svg viewBox="0 0 24 24" className="w-6 h-6  stroke-white ">
+      <path
+        d="M4 12H20M12 4V20"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>
     </svg>
   );
 };
 
 export const MinusSvg = () => {
   return (
-    <svg viewBox="0 0 24 24" className=" w-full h-full  stroke-main fill-main ">
-      <g>
+    <svg viewBox="0 0 24 24" className="w-6 h-6  stroke-white fill-none ">
+    
         <path
           d="M6 12L18 12"
           strokeWidth="1"
           strokeLinecap="round"
           strokeLinejoin="round"
         ></path>
-      </g>
+    
     </svg>
   );
 };

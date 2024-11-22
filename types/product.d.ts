@@ -9,6 +9,25 @@ declare interface IProduct extends IEntity {
     | TFruitSubProductType
     | TLegumeSubProductType;
   description?: string;
+  nutrition?: INutrition;
+  quantity?: number;
+  quantityType: IQuantityType[];
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+declare interface IProductSmall extends IEntity {
+  name: string;
+  imgUrl: string;
+  productType: TProductType;
+  subProductType:
+    | TVegSubProductType
+    | TFruitSubProductType
+    | TLegumeSubProductType;
+  quantityType: IQuantityType[];
+}
+
+declare interface INutrition {
   calories?: number;
   protein?: number;
   fat?: number;
@@ -16,15 +35,13 @@ declare interface IProduct extends IEntity {
   fiber?: number;
   vitamins?: string[];
   minerals?: string[];
-  quantity?: number;
-  quantityType?: TQuantityType[];
-  createdAt?: Date;
-  updatedAt?: Date;
 }
 
 declare interface IProductFIlter {
   name?: string;
   productType?: TProductType;
+  limit?: number;
+  skip?: number;
 }
 
 declare const PRODUCT_TYPE = [
@@ -96,4 +113,6 @@ declare type TQuantityType = (typeof QUANTITY_TYPE)[number];
 declare interface IQuantityType {
   type: TQuantityType;
   price: number;
+  quantity: number;
+  discount?: number;
 }

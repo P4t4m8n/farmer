@@ -1,27 +1,18 @@
 "use client";
 
-import { useRef } from "react";
-
 import Logo from "./Logo";
 import AppNav from "./AppNav";
-import { BasketSvg } from "../Icons/Icons";
+import Cart from "../Cart/Cart";
 
 export default function Header() {
-  const targetRef = useRef(null);
 
   return (
     <>
       <header className="fixed top-0 left-0  w-full  z-40 h-32  p-4  justify-between flex items-end shadow">
         <Logo />
         <AppNav />
-        <button>
-          <BasketSvg className=" w-12 h-12 fill-none stroke-white border p-2 rounded" />
-        </button>
+        <Cart />
       </header>
-      {/* <div
-        className=" w-screen top-[65rem] left-0 right-0 h-0 -z-10 absolute"
-        ref={targetRef}
-      ></div> */}
     </>
   );
 }

@@ -73,6 +73,32 @@ const orderSchema: Schema<IOrderModel> = new Schema(
   { timestamps: true }
 );
 
+const quantitySchema: Schema<IQuantityType> = new Schema(
+  {
+    price: { type: Number, required: true, min: 0 },
+    type: {
+      type: String,
+      enum: ["lb", "oz", "g", "kg", "unit"],
+      default: "unit",
+    },
+    quantity: { type: Number, required: true, min: 0 },
+    discount: { type: Number, min: 0, max: 100 },
+  },
+  { _id: false }
+);
+
+const nutritionSchema: Schema<INutrition> = new Schema(
+  {
+    calories: { type: Number, min: 0 },
+    protein: { type: Number, min: 0 },
+    fat: { type: Number, min: 0 },
+    carbohydrates: { type: Number, min: 0 },
+    fiber: { type: Number, min: 0 },
+    vitamins: [String],
+    minerals: [String],
+  },
+  { _id: false }
+);
 const productSchema: Schema<IProductModel> = new Schema(
   {
     name: { type: String, required: true, index: true },
@@ -99,28 +125,9 @@ const productSchema: Schema<IProductModel> = new Schema(
     },
     subProductType: String,
     description: String,
-    nutrition: {
-      calories: { type: Number, min: 0 },
-      protein: { type: Number, min: 0 },
-      fat: { type: Number, min: 0 },
-      carbohydrates: { type: Number, min: 0 },
-      fiber: { type: Number, min: 0 },
-      vitamins: [String],
-      minerals: [String],
-    },
     rating: { type: Number, min: 0, max: 5, default: 0 },
-    discount: { type: Number, min: 0, max: 100 },
-    quantity: { type: Number, required: true, min: 0 },
-    quantityType: [
-      {
-        price: { type: Number, required: true, min: 0 },
-        type: {
-          type: String,
-          enum: ["lb", "oz", "g", "kg", "unit"],
-          default: "unit",
-        },
-      },
-    ],
+    quantityType: [quantitySchema],
+    nutrition: nutritionSchema,
   },
   { timestamps: true }
 );

@@ -7,7 +7,6 @@ import { IProductModel, IQuantityType } from "./models";
 export async function seed() {
   const products = buildProductModels(fruits_veggies_data, fruits_veggies_img);
   saveToJson(products, "./products.json");
-  console.log("products:", products.length);
 }
 
 function buildProductModels(products: IProduct[], images: any[]) {
