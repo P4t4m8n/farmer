@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
             protocol: 'https',
             hostname: 'images.pexels.com',
             port: '',
+        },
+        {
+            protocol: 'https',
+            hostname: 'domf5oio6qrcr.cloudfront.net',
+            port: '',
         }
     ]
 }

@@ -52,7 +52,7 @@ const ProductBtn = memo(function ProductBtn({ productSmall }: Props) {
           <li key={qType?.type}>
             <input
               type="radio"
-              id={`${qType?.type}${productSmall._id || "1"}`}
+              id={`${qType?.type}${productSmall?._id || "1"}`}
               name={qType?.type}
               className="peer hidden"
               checked={quantityType?.type === qType?.type}
