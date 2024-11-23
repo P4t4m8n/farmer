@@ -1,62 +1,43 @@
-// export interface IOrderModel extends Document {
-//   user: mongoose.Types.ObjectId;
-//   orderAddress: mongoose.Types.ObjectId;
-//   orderDate: Date;
-//   totalPrice: number;
-//   status: TOrderStatus;
-//   products: IOrderProduct[];
-//   createdAt: Date;
-//   updatedAt: Date;
-// }
+import { Document } from "mongodb";
 
-// interface IOrderProduct extends Document {
-//   productId: mongoose.Types.ObjectId;
-//   quantity: number;
-// }
+type TSeason = "spring" | "summer" | "fall" | "winter" | "year-round";
+type TProductType =
+  | "vegetable"
+  | "fruit"
+  | "herb"
+  | "root"
+  | "legume"
+  | "nut"
+  | "spice"
+  | "other";
+type TQuantityType = "lb" | "oz" | "g" | "kg" | "unit" | "pack";
 
-// export interface IProductModel extends Document {
-//   name: string;
-//   imgsUrl?: string[];
-//   family?: string;
-//   season?: TSeason;
-//   productType: TProductType;
-//   subProductType?: string;
-//   description?: string;
-//   nutrition?: INutrition;
-//   quantity: number;
-//   discount?: number;
-//   rating?: number;
-//   quantityType: IQuantityType[];
-//   createdAt?: Date;
-//   updatedAt?: Date;
-// }
+interface IQuantityType {
+  price: number; // double
+  type: TQuantityType;
+  quantity: number; // int
+  discount?: number; // int, 0-100
+}
 
-// interface INutrition {
-//   calories?: number;
-//   protein?: number;
-//   fat?: number;
-//   carbohydrates?: number;
-//   fiber?: number;
-//   vitamins?: string[];
-//   minerals?: string[];
-// }
+interface INutrition {
+  calories?: number; // double
+  protein?: number; // double
+  fat?: number; // double
+  carbohydrates?: number; // double
+  fiber?: number; // double
+  vitamins?: string[]; // array of strings
+  minerals?: string[]; // array of strings
+}
 
-// export interface IUser extends Document {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   password: string;
-//   addressesId?: mongoose.Types.ObjectId[];
-//   createdAt?: Date;
-//   updatedAt?: Date;
-// }
-
-// export interface IAddressModel extends Document {
-//   street: string;
-//   city: string;
-//   state?: string;
-//   zipCode?: string;
-//   country: string;
-//   createdAt?: Date;
-//   updatedAt?: Date;
-// }
+export interface IProductDocumant extends Document {
+  name: string; // required
+  imgsUrl?: string[]; // array of strings
+  family?: string; // string
+  season?: TSeason; // enum
+  productType: TProductType; // required
+  subProductType?: string; // string
+  description?: string; // string
+  rating?: number; // int, 0-5
+  quantityType?: IQuantityType[]; // array of objects
+  nutrition?: INutrition; // nested object
+}

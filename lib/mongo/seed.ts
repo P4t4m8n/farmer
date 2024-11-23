@@ -13,7 +13,6 @@ export async function seed() {
       ...qt,
       price: { $numberDouble: qt.price },
     }));
-    console.log("quantityType:", quantityType);
 
     const nutrition = {
       calories: { $numberDouble: p.nutrition.calories },

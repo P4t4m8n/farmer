@@ -6,7 +6,7 @@ interface Props {
   product: IProductSmall;
 }
 const ProductPreview = ({ product }: Props) => {
-  const { _id, name, imgUrl, quantityType } = product;
+  const { _id, name, imgUrl, quantityType, productType } = product;
   const img = imgUrl && imgUrl !== "No image found" ? imgUrl : "/1.jpeg";
 
   const productSmall: IProductSmall = {
@@ -20,7 +20,7 @@ const ProductPreview = ({ product }: Props) => {
 
   return (
     <li className="  p-4 rounded border flex flex-col items-center gap-4 ">
-      <Link href={`/product/${_id}`}>
+      <Link href={`/products/${productType}/details/${_id}`}>
         <Image
           src={img}
           alt={name}

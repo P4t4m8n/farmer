@@ -202,7 +202,7 @@ export const createCollections = async () => {
       },
     });
 
-    console.log("Collections created successfully");
+    console.info("Collections created successfully");
   } catch (error) {
     console.error("Error creating collections:", error);
   } finally {
