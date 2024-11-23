@@ -3,17 +3,14 @@ import Link from "next/link";
 import ProductBtn from "./ProductBtn/ProductBtn";
 
 interface Props {
-  product: IProduct;
+  product: IProductSmall;
 }
 const ProductPreview = ({ product }: Props) => {
-  const { _id, name, imgsUrl, quantityType } = product;
-  const imgUrl =
-    imgsUrl && imgsUrl?.length > 0 && imgsUrl[0] !== "No image found"
-      ? imgsUrl[0]
-      : "/1.jpeg";
+  const { _id, name, imgUrl, quantityType } = product;
+  const img = imgUrl && imgUrl !== "No image found" ? imgUrl : "/1.jpeg";
 
   const productSmall: IProductSmall = {
-    _id:_id?.toString(),
+    _id: _id?.toString(),
     name,
     imgUrl,
     productType: product.productType,
@@ -25,7 +22,7 @@ const ProductPreview = ({ product }: Props) => {
     <li className="  p-4 rounded border flex flex-col items-center gap-4 ">
       <Link href={`/product/${_id}`}>
         <Image
-          src={imgUrl}
+          src={img}
           alt={name}
           width={192}
           height={192}

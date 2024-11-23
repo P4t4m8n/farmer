@@ -10,7 +10,7 @@ export const APP_NAV_LINKS: {
   },
   {
     text: "Fruits",
-    href: "/products/fruits",
+    href: "/products/fruit",
     icon: "fruit",
   },
   {

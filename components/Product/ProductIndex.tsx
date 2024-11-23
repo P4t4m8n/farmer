@@ -2,7 +2,7 @@ import ProductList from "./ProductList";
 import SideNav from "./SideNav";
 
 interface Props {
-  productsMap: Record<string, IProduct[]>;
+  productsMap: Record<string, IProductSmall[]>;
   subProductList: string[];
 }
 

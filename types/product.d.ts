@@ -1,3 +1,4 @@
+
 declare interface IProduct extends IEntity {
   name: string;
   imgsUrl?: string[];
@@ -16,7 +17,7 @@ declare interface IProduct extends IEntity {
   updatedAt?: Date;
 }
 
-declare interface IProductSmall extends IEntity {
+declare interface IProductSmall extends IEntity  {
   name: string;
   imgUrl: string;
   productType: TProductType;
@@ -37,7 +38,7 @@ declare interface INutrition {
   minerals?: string[];
 }
 
-declare interface IProductFIlter {
+declare interface IProductFilter {
   name?: string;
   productType?: TProductType;
   limit?: number;

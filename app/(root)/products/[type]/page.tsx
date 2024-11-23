@@ -1,6 +1,5 @@
 import ProductIndex from "@/components/Product/ProductIndex";
 import { getProducts } from "@/lib/actions/product.actions";
-import dbConnect from "@/lib/mongoose/db";
 import { productUtil } from "@/lib/utils/product.util";
 
 export default async function ProductPage({
@@ -9,14 +8,13 @@ export default async function ProductPage({
   params: Promise<{ type: string }>;
 }) {
   const { type } = await params;
-  await dbConnect();
   const productType = (type as TProductType) ?? "vegetable";
 
   const products = await getProducts({ productType });
 
   const subProductList = productUtil.getProductSubList(productType);
 
-  const productsMap: Record<string, IProduct[]> = {};
+  const productsMap: Record<string, IProductSmall[]> = {};
 
   products.forEach((product) => {
     if (!productsMap[product.subProductType]) {

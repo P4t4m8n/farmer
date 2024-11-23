@@ -1,7 +1,7 @@
 import ProductPreview from "./ProductPreview";
 
 interface Props {
-  products: IProduct[];
+  products: IProductSmall[];
 }
 const ProductList = ({ products }: Props) => {
   return (

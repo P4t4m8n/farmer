@@ -1,6 +1,6 @@
 "use server";
 
-import { models } from "../mongoose/schema";
+import { models } from "../mongo/schema";
 
 export const createAddress = async (address: IAddress) => {
   try {

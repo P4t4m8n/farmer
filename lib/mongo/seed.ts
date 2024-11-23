@@ -2,11 +2,32 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as fs from "fs";
 import { fruits_veggies_data, fruits_veggies_img } from "./data";
-import { IProductModel, IQuantityType } from "./models";
 
 export async function seed() {
   const products = buildProductModels(fruits_veggies_data, fruits_veggies_img);
-  saveToJson(products, "./products.json");
+
+  const x = loadJson("./products.json");
+
+  const y = x.map((p: any) => {
+    const quantityType = p.quantityType.map((qt: any) => ({
+      ...qt,
+      price: { $numberDouble: qt.price },
+    }));
+    console.log("quantityType:", quantityType);
+
+    const nutrition = {
+      calories: { $numberDouble: p.nutrition.calories },
+      protein: { $numberDouble: p.nutrition.protein },
+      fat: { $numberDouble: p.nutrition.fat },
+      carbohydrates: { $numberDouble: p.nutrition.carbohydrates },
+      fiber: { $numberDouble: p.nutrition.fiber },
+      vitamins: p.nutrition.vitamins,
+      minerals: p.nutrition.minerals,
+    };
+
+    return { ...p, nutrition, quantityType };
+  });
+  saveToJson(y, "./x.json");
 }
 
 function buildProductModels(products: IProduct[], images: any[]) {
@@ -23,20 +44,20 @@ function buildProductModels(products: IProduct[], images: any[]) {
   const productModels = products.map((product) => {
     const imgsUrl = imageMap.get(product.name) || [];
     const nutrition = {
-      calories: product.calories,
-      protein: product.protein,
-      fat: product.fat,
-      carbohydrates: product.carbohydrates,
-      fiber: product.fiber,
-      vitamins: product.vitamins,
-      minerals: product.minerals,
+      calories: { $numberDouble: product.nutrition?.calories },
+      protein: { $numberDouble: product.nutrition?.protein },
+      fat: { $numberDouble: product.nutrition?.fat },
+      carbohydrates: { $numberDouble: product.nutrition?.carbohydrates },
+      fiber: { $numberDouble: product.nutrition?.fiber },
+      vitamins: product.nutrition?.vitamins,
+      minerals: product.nutrition?.minerals,
     };
     const productType = product?.productType as TProductType;
     const quantity = getRandomNumber(3, 100);
-    const quantityType: IQuantityType[] = [
-      { type: "unit", price: getRandomNumber(0, 50) },
-      { type: "kg", price: getRandomNumber(0, 50) },
-      { type: "pack", price: getRandomNumber(0, 50) },
+    const quantityType = [
+      { type: "unit", price: { $numberDouble: getRandomNumber(0, 50) } },
+      { type: "kg", price: { $numberDouble: getRandomNumber(0, 50) } },
+      { type: "pack", price: { $numberDouble: getRandomNumber(0, 50) } },
     ];
 
     const productModel = {
