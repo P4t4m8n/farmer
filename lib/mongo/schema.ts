@@ -4,56 +4,62 @@ export const createCollections = async () => {
   try {
     const db = await DatabaseService.getDb();
 
-    // // User Collection
-    // await db.createCollection("users", {
-    //   validator: {
-    //     $jsonSchema: {
-    //       bsonType: "object",
-    //       required: ["firstName", "lastName", "email", "password"],
-    //       properties: {
-    //         firstName: {
-    //           bsonType: "string",
-    //           description: "First name is required",
-    //         },
-    //         lastName: {
-    //           bsonType: "string",
-    //           description: "Last name is required",
-    //         },
-    //         email: {
-    //           bsonType: "string",
-    //           pattern: "^.+@.+$",
-    //           description: "Valid email is required",
-    //         },
-    //         password: {
-    //           bsonType: "string",
-    //           description: "Password is required",
-    //         },
-    //         addressesId: {
-    //           bsonType: "array",
-    //           items: { bsonType: "objectId" },
-    //           description: "List of address IDs",
-    //         },
-    //       },
-    //     },
-    //   },
-    // });
+    // User Collection
+    await db.createCollection("users", {
+      validator: {
+        $jsonSchema: {
+          bsonType: "object",
+          required: ["firstName", "lastName", "email"],
+          properties: {
+            firstName: {
+              bsonType: "string",
+              description: "First name is required",
+            },
+            lastName: {
+              bsonType: "string",
+              description: "Last name is required",
+            },
+            email: {
+              bsonType: "string",
+              pattern: "^.+@.+$",
+              description: "Valid email is required",
+            },
+            passwordHash: {
+              bsonType: ["string", "null"], // Allow string or null
+              description: "Password is required if Google ID is not provided",
+            },
+            googleId: {
+              bsonType: ["string", "null"], // Allow string or null
+              description: "Google ID is required if Password is not provided",
+            },
+            imgUrl: { bsonType: "string" },
+          },
+          // Either passwordHash or googleId is required allowed both
+          anyOf: [{ required: ["passwordHash"] }, { required: ["googleId"] }],
+        },
+      },
+    });
 
-    // // Address Collection
-    // await db.createCollection("addresses", {
-    //   validator: {
-    //     $jsonSchema: {
-    //       bsonType: "object",
-    //       required: ["street", "city", "country"],
-    //       properties: {
-    //         street: { bsonType: "string", description: "Street is required" },
-    //         city: { bsonType: "string", description: "City is required" },
-    //         state: { bsonType: "string" },
-    //         zipCode: { bsonType: "string" },
-    //         country: { bsonType: "string", description: "Country is required" },
-    //       },
-    //     },
-    //   },
-    // });
+    // Address Collection
+    await db.createCollection("addresses", {
+      validator: {
+        $jsonSchema: {
+          bsonType: "object",
+          required: ["street", "city", "country"],
+          properties: {
+            street: { bsonType: "string", description: "Street is required" },
+            city: { bsonType: "string", description: "City is required" },
+            state: { bsonType: "string" },
+            zipCode: { bsonType: "string" },
+            country: { bsonType: "string", description: "Country is required" },
+            userId: {
+              bsonType: "objectId",
+              description: "User ID is required",
+            },
+          },
+        },
+      },
+    });
 
     // // Order Collection
     // await db.createCollection("orders", {

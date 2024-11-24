@@ -1,7 +1,7 @@
 "use client";
 
+import { iconService } from "@/components/Icons/Icons";
 import { useCartItem } from "@/hooks/useCartItem";
-import { MinusSvg, PlusSvg } from "@/components/Icons/Icons";
 import { memo, useCallback, useEffect, useState } from "react";
 
 interface Props {
@@ -74,11 +74,11 @@ const ProductBtn = memo(function ProductBtn({ productSmall }: Props) {
           onClick={() => handleAmountChange(quantityType.amount - 1)}
           disabled={quantityType?.amount < 1}
         >
-          <MinusSvg />
+          {iconService.MinusSvg()}
         </button>
         <span className="text-lg ">{quantityType?.amount}</span>
         <button onClick={() => handleAmountChange(quantityType.amount + 1)}>
-          <PlusSvg />
+          {iconService.PlusSvg()}
         </button>
       </div>
     </div>

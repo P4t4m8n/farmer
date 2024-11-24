@@ -5,6 +5,7 @@ interface Props {
   products: IProduct[];
 }
 const Home = ({ products }: Props) => {
+  console.log("products:", products)
   return (
     <main className="">
       <Parallax backgroundName="main">

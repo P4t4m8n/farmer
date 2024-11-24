@@ -29,7 +29,7 @@ export async function seed() {
   saveToJson(y, "./x.json");
 }
 
-function buildProductModels(products: IProduct[], images: any[]) {
+function buildProductModels(products: any[], images: any[]) {
   const imageMap = new Map<string, string[]>();
   images.forEach((img) => {
     const name = img.name;

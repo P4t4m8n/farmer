@@ -11,14 +11,12 @@ type TProductType =
   | "spice"
   | "other";
 type TQuantityType = "lb" | "oz" | "g" | "kg" | "unit" | "pack";
-
 interface IQuantityType {
   price: number; // double
   type: TQuantityType;
   quantity: number; // int
   discount?: number; // int, 0-100
 }
-
 interface INutrition {
   calories?: number; // double
   protein?: number; // double
@@ -28,7 +26,6 @@ interface INutrition {
   vitamins?: string[]; // array of strings
   minerals?: string[]; // array of strings
 }
-
 export interface IProductDocumant extends Document {
   name: string; // required
   imgsUrl?: string[]; // array of strings
@@ -40,4 +37,13 @@ export interface IProductDocumant extends Document {
   rating?: number; // int, 0-5
   quantityType?: IQuantityType[]; // array of objects
   nutrition?: INutrition; // nested object
+}
+
+export interface IUserDocumant extends Document {
+  firstName: string; // required
+  lastName: string; // required
+  email: string; // required
+  passwordHash?: string | null;
+  googleId?: string | null;
+  imgUrl?: string;
 }

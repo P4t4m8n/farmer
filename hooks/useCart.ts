@@ -1,13 +1,13 @@
 "use client";
 import { useContext, useEffect, useState } from "react";
-import { CartContext } from "@/context/CartContext";
+import { CartContext } from "@/providers/CartContext";
 
 export const useCart = () => {
   const context = useContext(CartContext);
   if (!context) {
     throw new Error("useCart must be used within a CartProvider");
   }
-  const { getAllCartItems, updateCart, subscribe,clearCart } = context;
+  const { getAllCartItems, updateCart, subscribe, clearCart } = context;
 
   const [cartItems, setCartItems] = useState(() => getAllCartItems());
 
@@ -22,5 +22,5 @@ export const useCart = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { cartItems, updateCart ,clearCart};
+  return { cartItems, updateCart, clearCart };
 };

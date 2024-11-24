@@ -191,7 +191,7 @@ export const fruits_veggies_names = [
   "Mulberry",
 ];
 
-export const fruits_veggies_data: IProduct[] = [
+export const fruits_veggies_data = [
   {
     name: "Apple",
     family: "Rosaceae",

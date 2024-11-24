@@ -11,6 +11,7 @@ import {
 } from "react";
 
 import { useRouter } from "next/navigation";
+import { authClientService } from "@/lib/client/auth.client.service";
 
 interface Props {
   children: React.ReactNode;
@@ -21,6 +22,7 @@ interface AuthProvider {
   signUp: (formData: FormData) => Promise<void>;
   logout: () => Promise<void>;
   getCurrentUserNoRender: () => IUser | null;
+  setUser: React.Dispatch<React.SetStateAction<IUser | null>>;
 }
 
 export const authContext = createContext<AuthProvider | undefined>(undefined);
@@ -39,8 +41,8 @@ export const AuthProvider: FC<Props> = ({
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        // const user = await authClientService.getSession();
-        // setUser(user);
+        const user = await authClientService.getSession();
+        setUser(user);
         userRef.current = user;
       } catch (error) {
         console.error("Error fetching user:", error);
@@ -48,7 +50,6 @@ export const AuthProvider: FC<Props> = ({
     };
 
     fetchUser();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const login = async (formData: FormData) => {
@@ -84,7 +85,7 @@ export const AuthProvider: FC<Props> = ({
 
   const logout = async () => {
     try {
-      //   await authClientService.logout();
+        await authClientService.logout();
     } catch (error) {
       console.error("Error logging out:", error);
     } finally {
@@ -105,7 +106,7 @@ export const AuthProvider: FC<Props> = ({
 
   return (
     <authContext.Provider
-      value={{ user, login, signUp, logout, getCurrentUserNoRender }}
+      value={{ user, login, signUp, logout, getCurrentUserNoRender,setUser }}
     >
       {children}
     </authContext.Provider>

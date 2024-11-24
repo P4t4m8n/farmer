@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import React, { useEffect, useRef } from "react";
-import { PlusSvg } from "../Icons/Icons";
+import { iconService } from "../Icons/Icons";
 
 interface Props {
   children: React.ReactNode;
@@ -43,7 +43,7 @@ const DialogWarpper = ({ children }: Props) => {
           onClick={handleClose}
           className=" bg-black-2 text-white rounded-full w-6 h-6  rotate-45 mt-1"
         >
-          <PlusSvg />
+          {iconService.PlusSvg()}
         </button>
         {children}
       </div>

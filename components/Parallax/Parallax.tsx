@@ -6,6 +6,7 @@ interface Props {
 }
 
 export default function Parallax({ backgroundName, children }: Props) {
+  console.log("backgroundName:", backgroundName)
   return (
     <div className="relative h-screen overflow-hidden img-clip-path">
       <div

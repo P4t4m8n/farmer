@@ -1,7 +1,7 @@
-import { APP_NAV_LINKS } from "@/constants/NavLinks";
+import { APP_NAV_LINKS } from "@/constants/navLinks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { getSVGByName } from "../Icons/Icons";
+import { iconService } from "../Icons/Icons";
 
 export default function AppNav() {
   const pathname = usePathname();
@@ -17,7 +17,7 @@ export default function AppNav() {
             location === link.icon ? " before:w-full " : ""
           }`}
         >
-          {getSVGByName(link.icon, "h-8 w-8 fill-white ")}
+          {iconService.getSVGByName(link.icon, "h-8 w-8 fill-white ")}
           <h3>{link.text}</h3>
         </Link>
       ))}

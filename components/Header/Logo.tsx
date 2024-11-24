@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LogoSvg } from "../Icons/Icons";
+import { iconService } from "../Icons/Icons";
 
 export default function Logo() {
   return (
@@ -8,7 +8,7 @@ export default function Logo() {
       href="/"
       className="flex items-center opacity-100 flex-col w-56 fill-gray-900"
     >
-      <LogoSvg style={""} />
+      {iconService.LogoSvg({ style: "" })}
       <h3 className="font-title font-semibold text-lg text-white">
         The Happy farmer
       </h3>
