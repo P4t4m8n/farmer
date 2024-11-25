@@ -6,7 +6,6 @@ interface Props {
   images: string[];
 }
 const ImageGallray = ({ images }: Props) => {
-  console.log("images:", images);
   return (
     <ul>
       {images.map((img, idx) => (

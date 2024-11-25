@@ -12,9 +12,13 @@ const ProductIndex = ({ productsMap, subProductList }: Props) => {
       <SideNav subProductList={subProductList} />
       <ul className="pl-64 w-full gap-8 flex flex-col">
         {subProductList.map((subProduct) => (
-          <li key={subProduct} id={subProduct} className=" scroll-mt-[9.5rem] pt-16 " >
-            <h3 className="text-4xl font-title pb-8" >{subProduct}</h3>
-            <ProductList products={productsMap[subProduct]} />
+          <li
+            key={subProduct}
+            id={subProduct}
+            className=" scroll-mt-[9.5rem] pt-16 "
+          >
+            <h3 className="text-4xl font-title pb-8">{subProduct}</h3>
+            <ProductList products={productsMap[subProduct]} styleMode="page" />
           </li>
         ))}
       </ul>

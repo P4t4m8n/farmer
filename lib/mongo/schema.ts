@@ -62,61 +62,61 @@ export const createCollections = async () => {
     });
 
     // // Order Collection
-    // await db.createCollection("orders", {
-    //   validator: {
-    //     $jsonSchema: {
-    //       bsonType: "object",
-    //       required: ["user", "orderAddress", "totalPrice", "products"],
-    //       properties: {
-    //         user: { bsonType: "objectId", description: "User ID is required" },
-    //         orderAddress: {
-    //           bsonType: "objectId",
-    //           description: "Order address ID is required",
-    //         },
-    //         orderDate: { bsonType: "date", description: "Order date" },
-    //         totalPrice: {
-    //           bsonType: "double",
-    //           minimum: 0,
-    //           description: "Total price is required",
-    //         },
-    //         status: {
-    //           bsonType: "string",
-    //           enum: [
-    //             "pending",
-    //             "processing",
-    //             "shipped",
-    //             "delivered",
-    //             "cancelled",
-    //           ],
-    //           description: "Order status",
-    //         },
-    //         products: {
-    //           bsonType: "array",
-    //           items: {
-    //             bsonType: "object",
-    //             required: ["productId", "quantity", "quantityType"],
-    //             properties: {
-    //               productId: {
-    //                 bsonType: "objectId",
-    //                 description: "Product ID is required",
-    //               },
-    //               quantity: {
-    //                 bsonType: "int",
-    //                 minimum: 1,
-    //                 description: "Quantity must be at least 1",
-    //               },
-    //               quantityType: {
-    //                 bsonType: "string",
-    //                 enum: ["lb", "oz", "g", "kg", "unit"],
-    //                 description: "Quantity type",
-    //               },
-    //             },
-    //           },
-    //         },
-    //       },
-    //     },
-    //   },
-    // });
+    await db.createCollection("orders", {
+      validator: {
+        $jsonSchema: {
+          bsonType: "object",
+          required: ["user", "orderAddress", "totalPrice", "products"],
+          properties: {
+            user: { bsonType: "objectId", description: "User ID is required" },
+            orderAddress: {
+              bsonType: "objectId",
+              description: "Order address ID is required",
+            },
+            orderDate: { bsonType: "date", description: "Order date" },
+            totalPrice: {
+              bsonType: "double",
+              minimum: 0,
+              description: "Total price is required",
+            },
+            status: {
+              bsonType: "string",
+              enum: [
+                "pending",
+                "processing",
+                "shipped",
+                "delivered",
+                "cancelled",
+              ],
+              description: "Order status",
+            },
+            products: {
+              bsonType: "array",
+              items: {
+                bsonType: "object",
+                required: ["productId", "quantity", "quantityType"],
+                properties: {
+                  productId: {
+                    bsonType: "objectId",
+                    description: "Product ID is required",
+                  },
+                  quantity: {
+                    bsonType: "int",
+                    minimum: 1,
+                    description: "Quantity must be at least 1",
+                  },
+                  quantityType: {
+                    bsonType: "string",
+                    enum: ["lb", "oz", "g", "kg", "unit"],
+                    description: "Quantity type",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    });
 
     // Product Collection
     await db.createCollection("products", {

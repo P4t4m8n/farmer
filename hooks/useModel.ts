@@ -37,6 +37,7 @@ export const useModel = (
         callBack();
         return;
       }
+      console.log("click outside");
       setOpen(false);
     },
     [open, ref, callBack]
@@ -55,10 +56,10 @@ export const useModel = (
     currentEventListeners.click = checkClickOutside;
     currentEventListeners.keydown = checkKeyPress;
 
-    document.addEventListener("click", currentEventListeners.click);
+    document.addEventListener("mousedown", currentEventListeners.click);
     document.addEventListener("keydown", currentEventListeners.keydown);
     return () => {
-      document.removeEventListener("click", currentEventListeners.click);
+      document.removeEventListener("mousedown", currentEventListeners.click);
       document.removeEventListener("keydown", currentEventListeners.keydown);
     };
   }, [open, ref, checkClickOutside, checkKeyPress]);

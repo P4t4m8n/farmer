@@ -45,7 +45,6 @@ export const signIn = async (
 
     await createCookie(token);
     delete user.passwordHash;
-    console.log("user:", user);
     return { ...user, _id };
   } catch (error) {
     throw error;

@@ -22,7 +22,6 @@ const AuthFormClient = () => {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
-  console.log("state:", state);
   const inputs = isLogin ? LOGIN_INPUTS : SIGN_UP_INPUTS;
   return (
     <div className="flex flex-col items-center p-4 gap-8 bg-white">

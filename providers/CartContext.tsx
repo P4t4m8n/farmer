@@ -5,13 +5,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-interface ICartItem {
-  product: IProductSmall;
-  quantityType: IQuantityType;
-  amount: number;
-  totalPrice: number;
-}
-
 type Subscriber = () => void;
 
 interface CartProvider {
@@ -51,6 +44,7 @@ export const CartProvider: FC<Props> = ({ children }) => {
     const productId = product._id!;
     if (amount < 1) {
       delete cartItemsRef.current[productId];
+   
     } else {
       cartItemsRef.current[productId] = {
         product,

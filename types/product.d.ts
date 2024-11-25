@@ -1,4 +1,3 @@
-
 declare interface IProduct extends IEntity {
   name: string;
   imgsUrl?: string[];
@@ -17,7 +16,7 @@ declare interface IProduct extends IEntity {
   updatedAt?: Date;
 }
 
-declare interface IProductSmall extends IEntity  {
+declare interface IProductSmall extends IEntity {
   name: string;
   imgUrl: string;
   productType: TProductType;
@@ -116,4 +115,18 @@ declare interface IQuantityType {
   price: number;
   quantity: number;
   discount?: number;
+}
+
+declare type TProductStyleMode = "page" | "cart";
+declare interface IProdyctStyleMode {
+  contianer: string;
+  radioBtns: {
+    contianer: string;
+    label: string;
+  };
+  price: string;
+  btns: {
+    contianer: string;
+    span: string;
+  };
 }

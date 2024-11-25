@@ -4,8 +4,23 @@ import ProductBtn from "./ProductBtn/ProductBtn";
 
 interface Props {
   product: IProductSmall;
+  styleMode: TProductStyleMode;
 }
-const ProductPreview = ({ product }: Props) => {
+
+// Module imports cause Tailwind to ignore classes, so the constants are defined here
+const PRODUCT_ITEM_PAGE_STYLE = {
+  contianer: "p-4 rounded border flex flex-col items-center gap-4",
+  img: "w-40 aspect-square rounded",
+  imgSize: 192,
+  name: "text-center text-lg font-title font-semibold",
+};
+const PRODUCT_ITEM_CART_STYLE = {
+  contianer: "p-4 rounded border flex flex-col items-center gap-4",
+  img: "w-40 aspect-square rounded",
+  imgSize: 64,
+  name: "",
+};
+const ProductPreview = ({ product, styleMode }: Props) => {
   const { _id, name, imgUrl, quantityType, productType } = product;
   const img = imgUrl && imgUrl !== "No image found" ? imgUrl : "/1.jpeg";
 
@@ -18,19 +33,22 @@ const ProductPreview = ({ product }: Props) => {
     quantityType,
   };
 
+  const style =
+    styleMode === "page" ? PRODUCT_ITEM_PAGE_STYLE : PRODUCT_ITEM_CART_STYLE;
+
   return (
-    <li className="  p-4 rounded border flex flex-col items-center gap-4 ">
+    <li className={`${style.contianer}`}>
       <Link href={`/products/${productType}/details/${_id}`}>
         <Image
           src={img}
           alt={name}
-          width={192}
-          height={192}
-          className=" object-cover w-48 aspect-square"
+          width={style.imgSize}
+          height={style.imgSize}
+          className={`${style.img}`}
         />
-        <h4>{name}</h4>
+        <h4 className={`${style.name}`}>{name}</h4>
       </Link>
-      <ProductBtn productSmall={productSmall} />
+      <ProductBtn productSmall={productSmall} styleMode="page" />
     </li>
   );
 };

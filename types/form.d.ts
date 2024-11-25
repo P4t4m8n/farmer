@@ -6,7 +6,7 @@ declare type TInputUserFormKeys =
   | "lastName";
 
 declare type TInput = {
-  type: "text" | "password" | "email" | "tel" | "number";
+  type: "text" | "password" | "email" | "tel" | "number"|"radio";
   placeholder?: string;
   name: string;
   label?: string;
@@ -20,6 +20,6 @@ declare type TInput = {
   maxLength?: number;
 };
 
-declare interface ISelectSingleProps extends TInput {
+declare interface ISelect extends TInput {
   options: readonly string[];
 }

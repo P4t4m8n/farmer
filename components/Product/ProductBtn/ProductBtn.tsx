@@ -1,16 +1,23 @@
 "use client";
 
-import { iconService } from "@/components/Icons/Icons";
 import { useCartItem } from "@/hooks/useCartItem";
-import { memo, useCallback, useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
+import QuantityType from "./QuantityType";
+import AmountChange from "./AmountChange";
+import { iconService } from "@/components/Icons/Icons";
 
 interface Props {
   productSmall: IProductSmall;
+  styleMode: "page" | "cart";
 }
-const ProductBtn = memo(function ProductBtn({ productSmall }: Props) {
-  const productId = productSmall._id!;
 
+const ProductBtn = memo(function ProductBtn({
+  productSmall,
+  styleMode,
+}: Props) {
+  const productId = productSmall._id!;
   const { cartItem, updateCart } = useCartItem(productId);
+  console.log("cartItem:", cartItem);
 
   const [quantityType, setQuantityType] = useState<
     IQuantityType & { amount: number }
@@ -23,66 +30,98 @@ const ProductBtn = memo(function ProductBtn({ productSmall }: Props) {
     if (cartItem) {
       const { quantityType: cartQuantityType, amount } = cartItem;
       setQuantityType({ ...cartQuantityType, amount });
-    } else if (quantityType.amount !== 0) {
+    } else {
       setQuantityType({ ...productSmall.quantityType[0], amount: 0 });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cartItem]);
 
-  const handleAmountChange = useCallback(
-    (amount: number) => {
+  const handleAmountChange = (dir: number) => {
+    const amount = dir ? quantityType.amount + dir : dir;
+    if (amount >= 0) {
       updateCart(productSmall, quantityType, amount);
-    },
-    [updateCart, productSmall, quantityType]
-  );
+    }
+  };
+  const handleQuantityTypeChange = (qType: IQuantityType) => {
+    setQuantityType((prev) => ({ ...qType, amount: prev.amount }));
+    if (quantityType.amount > 0) {
+      updateCart(productSmall, qType, quantityType.amount);
+    }
+  };
+  const createQuantityTypeChangeHandler = (qType: IQuantityType) => () => {
+    handleQuantityTypeChange(qType);
+  };
 
-  const quantityTypeChange = useCallback(
-    (qType: IQuantityType) => {
-      setQuantityType({ ...qType, amount: quantityType.amount });
-      if (quantityType.amount > 0)
-        updateCart(productSmall, qType, quantityType.amount);
-    },
-    [quantityType.amount, productSmall, updateCart]
-  );
+  const style =
+    styleMode === "page" ? PRODUCT_BTN_PAGE_STYLE : PRODUCT_BTN_CART_STYLE;
 
   return (
-    <div>
-      <ul className="flex gap-2 border rounded-3xl bg-inherit p-1">
-        {productSmall.quantityType?.map((qType) => (
-          <li key={qType?.type}>
-            <input
-              type="radio"
-              id={`${qType?.type}${productSmall?._id || "1"}`}
-              name={qType?.type}
-              className="peer hidden"
-              checked={quantityType?.type === qType?.type}
-              onChange={() => quantityTypeChange(qType)}
-            />
-            <label
-              className={`peer rounded-3xl cursor-pointer  py-1 px-2 text-sm font-semibold font-text ${
-                quantityType?.type === qType?.type ? "bg-white text-black" : ""
-              }`}
-              htmlFor={`${qType?.type}${productSmall._id}`}
-            >
-              {qType?.type}
-            </label>
-          </li>
-        ))}
-      </ul>
-      <div className="flex items-center justify-center pt-4 gap-4">
-        <button
-          onClick={() => handleAmountChange(quantityType.amount - 1)}
-          disabled={quantityType?.amount < 1}
-        >
-          {iconService.MinusSvg()}
-        </button>
-        <span className="text-lg ">{quantityType?.amount}</span>
-        <button onClick={() => handleAmountChange(quantityType.amount + 1)}>
-          {iconService.PlusSvg()}
-        </button>
+    <>
+      <div className={style.contianer}>
+        <QuantityType
+          style={style.radioBtns}
+          quantityTypes={productSmall.quantityType}
+          quantityType={quantityType}
+          productId={productId}
+          createQuantityTypeChangeHandler={createQuantityTypeChangeHandler}
+        />
+        <h3 className={style.price}>
+          $
+          {quantityType.price -
+            (quantityType?.discount
+              ? quantityType?.price / quantityType?.discount
+              : 0)}
+        </h3>
+        <AmountChange
+          style={style.btns}
+          amount={quantityType.amount}
+          handleAmountChange={handleAmountChange}
+        />
       </div>
-    </div>
+      {styleMode === "cart" && (
+        <button
+          onClick={(ev) => {
+            ev.stopPropagation();
+            ev.preventDefault();
+            handleAmountChange(0);
+          }}
+          className="w-4 h-4 fill-dark-text dark:fill-light-text"
+        >
+          {iconService.DeleteSvg()}
+        </button>
+      )}
+    </>
   );
 });
 
 export default ProductBtn;
+
+// Module imports cause Tailwind to ignore classes, so the constants are defined here
+const PRODUCT_BTN_PAGE_STYLE: IProdyctStyleMode = {
+  contianer:
+    "grid gap-4 bg-light-bg dark:bg-dark-bg text-dark-text dark:text-light-text",
+  radioBtns: {
+    contianer: "flex gap-2 border rounded-3xl bg-inherit p-1",
+    label:
+      "peer rounded-3xl cursor-pointer py-1 px-2 text-sm font-semibold font-text",
+  },
+  price: "text-center text-lg font-title",
+  btns: {
+    contianer: "flex items-center justify-center gap-4 text-center font-text",
+    span: "text-lg",
+  },
+};
+const PRODUCT_BTN_CART_STYLE: IProdyctStyleMode = {
+  contianer:
+    "grid gap-4 bg-light-bg dark:bg-dark-bg text-dark-text dark:text-light-text",
+  radioBtns: {
+    contianer: "flex gap-2 border rounded-3xl bg-inherit p-1",
+    label:
+      "peer rounded-3xl cursor-pointer py-1 px-2 text-sm font-semibold font-text",
+  },
+  price: "text-center text-lg font-title",
+  btns: {
+    contianer: "flex items-center justify-center gap-4 text-center font-text",
+    span: "text-lg",
+  },
+};

@@ -56,7 +56,6 @@ export async function GET(req: NextRequest) {
     }
 
     const userInfo = await userInfoResponse.json();
-    console.log("userInfo:", userInfo);
     const fromData = new FormData();
     fromData.append("email", userInfo.email);
     fromData.append("firstName", userInfo.given_name);
