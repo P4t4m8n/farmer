@@ -17,7 +17,6 @@ const ProductBtn = memo(function ProductBtn({
 }: Props) {
   const productId = productSmall._id!;
   const { cartItem, updateCart } = useCartItem(productId);
-  console.log("cartItem:", cartItem);
 
   const [quantityType, setQuantityType] = useState<
     IQuantityType & { amount: number }
@@ -56,28 +55,26 @@ const ProductBtn = memo(function ProductBtn({
     styleMode === "page" ? PRODUCT_BTN_PAGE_STYLE : PRODUCT_BTN_CART_STYLE;
 
   return (
-    <>
-      <div className={style.contianer}>
-        <QuantityType
-          style={style.radioBtns}
-          quantityTypes={productSmall.quantityType}
-          quantityType={quantityType}
-          productId={productId}
-          createQuantityTypeChangeHandler={createQuantityTypeChangeHandler}
-        />
-        <h3 className={style.price}>
-          $
-          {quantityType.price -
-            (quantityType?.discount
-              ? quantityType?.price / quantityType?.discount
-              : 0)}
-        </h3>
-        <AmountChange
-          style={style.btns}
-          amount={quantityType.amount}
-          handleAmountChange={handleAmountChange}
-        />
-      </div>
+    <div className={style.contianer}>
+      <QuantityType
+        style={style.radioBtns}
+        quantityTypes={productSmall.quantityType}
+        quantityType={quantityType}
+        productId={productId}
+        createQuantityTypeChangeHandler={createQuantityTypeChangeHandler}
+      />
+      <h3 className={style.price}>
+        $
+        {quantityType.price -
+          (quantityType?.discount
+            ? quantityType?.price / quantityType?.discount
+            : 0)}
+      </h3>
+      <AmountChange
+        style={style.btns}
+        amount={quantityType.amount}
+        handleAmountChange={handleAmountChange}
+      />
       {styleMode === "cart" && (
         <button
           onClick={(ev) => {
@@ -90,7 +87,7 @@ const ProductBtn = memo(function ProductBtn({
           {iconService.DeleteSvg()}
         </button>
       )}
-    </>
+    </div>
   );
 });
 
@@ -112,16 +109,17 @@ const PRODUCT_BTN_PAGE_STYLE: IProdyctStyleMode = {
   },
 };
 const PRODUCT_BTN_CART_STYLE: IProdyctStyleMode = {
-  contianer:
-    "grid gap-4 bg-light-bg dark:bg-dark-bg text-dark-text dark:text-light-text",
+  contianer: "flex gap-4 ",
   radioBtns: {
     contianer: "flex gap-2 border rounded-3xl bg-inherit p-1",
     label:
-      "peer rounded-3xl cursor-pointer py-1 px-2 text-sm font-semibold font-text",
+      "peer rounded-3xl cursor-pointer py-1 px-1 text-sm font-semibold font-text",
   },
-  price: "text-center text-lg font-title",
+  price: "hidden",
   btns: {
-    contianer: "flex items-center justify-center gap-4 text-center font-text",
-    span: "text-lg",
+    contianer:
+      "flex items-center justify-center gap-4 text-center font-text h-4 w-12",
+    span: "",
+    svgSize: 4,
   },
 };

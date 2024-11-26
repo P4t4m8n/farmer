@@ -33,11 +33,11 @@ export const useModel = (
       if (!ref.current) return;
       if (ref.current.contains(ev.target as Node)) return;
 
+      console.info("click outside");
       if (callBack) {
         callBack();
         return;
       }
-      console.log("click outside");
       setOpen(false);
     },
     [open, ref, callBack]

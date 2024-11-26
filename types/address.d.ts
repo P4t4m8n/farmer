@@ -1,15 +1,26 @@
 
-declare interface IAddress extends IEntity {
-  _id?: string;
-  street: string;
+interface IStreet {
+  name: string;
+  number: string;
+  floor?: string;
+  entrance?: string;
+  apartment?: string;
+}
+
+interface IAddressBase {
+  street: IStreet;
   city: string;
   state?: string;
   zipCode?: string;
   country: string;
-  createdAt?: Date;
-  updatedAt?: Date;
 }
+declare interface IAddress extends IEntity, IAddressBase {
+  userId: string;
+}
+
+
 
 declare interface IAddressFIlter {
   city?: string;
+  userId?: string;
 }

@@ -6,14 +6,21 @@ declare type TOrderStatus =
   | "cancelled";
 
 declare interface IOrder extends IEntity {
-  user: mongoose.Types.ObjectId;
-  orderAddress: mongoose.Types.ObjectId;
+  user: IUser;
+  address: IAddress | null;
   orderDate: Date;
   totalPrice: number;
   status: OrderStatus;
-  products: IOrderProduct[];
-  createdAt: Date;
-  updatedAt: Date;
+  products: ICartItem[];
+  createdAt?: Date;
+  updatedAt?: Date;
+  receiptNumber: string | null;
+  userDetails: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+  };
 }
 
 declare interface IOrderFilter {

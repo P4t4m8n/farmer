@@ -18,6 +18,15 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  &:has(.open-model) {
+    .open-model,
+    .open-model * {
+      pointer-events: all;
+    }
+    :not(.open-model, .open-model *) {
+      pointer-events: none;
+    }
+  }
 }
 
 @layer utilities {

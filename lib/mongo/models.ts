@@ -1,4 +1,4 @@
-import { Document } from "mongodb";
+import { Document, ObjectId } from "mongodb";
 
 type TSeason = "spring" | "summer" | "fall" | "winter" | "year-round";
 type TProductType =
@@ -38,7 +38,6 @@ export interface IProductDocumant extends Document {
   quantityType?: IQuantityType[]; // array of objects
   nutrition?: INutrition; // nested object
 }
-
 export interface IUserDocumant extends Document {
   firstName: string; // required
   lastName: string; // required

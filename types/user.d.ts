@@ -3,6 +3,7 @@ declare interface IUser extends IEntity {
   lastName: string;
   email: string;
   imgUrl?: string;
+  phone?: string;
   password?: string;
   createdAt?: Date;
   updatedAt?: Date;

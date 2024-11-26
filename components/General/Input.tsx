@@ -1,16 +1,20 @@
 interface Props {
   inputProps: TInput;
   error?: string;
+  children?: React.ReactNode;
 }
-export default function Input({ inputProps, error }: Props) {
-  const { label, name } = inputProps;
+export default function Input({ inputProps, children, error }: Props) {
+  const { name } = inputProps;
   return (
-    <div className=" text-black-1">
-      <label className="" htmlFor={name}>
-        <h3>{label}</h3>
+    <div className=" bg-inherit">
+      <label className="bg-inherit" htmlFor={name}>
+        {children && children}
         {error && <p className="text-red-500 text-sm">{error}</p>}
       </label>
-      <input {...inputProps} className="" />
+      <input
+        {...inputProps}
+        
+      />
     </div>
   );
 }

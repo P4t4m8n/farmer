@@ -4,12 +4,12 @@ interface Props {
   style: {
     contianer: string;
     span: string;
+    svgSize?: number;
   };
   amount: number;
   handleAmountChange: (amount: number) => void;
 }
 const AmountChange = ({ style, amount, handleAmountChange }: Props) => {
-  console.log("amount:", amount);
   return (
     <div className={style.contianer}>
       <button
@@ -17,11 +17,11 @@ const AmountChange = ({ style, amount, handleAmountChange }: Props) => {
         disabled={amount < 0}
         className=""
       >
-        {iconService.MinusSvg()}
+        {iconService.MinusSvg(style.svgSize)}
       </button>
       <span className={style.span}>{amount}</span>
       <button onClick={() => handleAmountChange(1)} className="">
-        {iconService.PlusSvg()}
+        {iconService.PlusSvg(style.svgSize)}
       </button>
     </div>
   );

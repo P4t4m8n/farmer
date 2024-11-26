@@ -128,5 +128,6 @@ declare interface IProdyctStyleMode {
   btns: {
     contianer: string;
     span: string;
+    svgSize?: number;
   };
 }

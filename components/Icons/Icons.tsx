@@ -16,9 +16,9 @@ const LogoSvg = ({ style }: { style: string }) => {
   );
 };
 
-const PlusSvg = () => {
+const PlusSvg = (size = 6) => {
   return (
-    <svg viewBox="0 0 24 24" className="w-6 h-6  stroke-white ">
+    <svg viewBox="0 0 24 24" className={`w-${size} h-${size} stroke-white`}>
       <path
         d="M4 12H20M12 4V20"
         strokeWidth="2"
@@ -29,11 +29,11 @@ const PlusSvg = () => {
   );
 };
 
-const MinusSvg = () => {
+const MinusSvg = (size = 6) => {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="w-6 h-6  stroke-dark-text fill-none   dark:stroke-light-text "
+      className={`w-${size} h-${size}  stroke-dark-text fill-none   dark:stroke-light-text `}
     >
       <path
         d="M6 12L18 12"

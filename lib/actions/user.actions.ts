@@ -9,21 +9,16 @@ export const getUserById = async (userId: string): Promise<IUser | null> => {
       "users"
     );
 
-    const userDocumant = await userCollection.findOne(
+    const user = await userCollection.findOne<IUser>(
       { _id: new ObjectId(userId) },
-      { projection: { password: 0 } }
+      { projection: { passwordHash: 0, googleId: 0 } }
     );
-
-    if (!userDocumant) {
+    
+    if (!user || !user?._id) {
       throw new Error("User not found");
     }
-
-    const user: IUser = {
-      lastName: userDocumant.lastName,
-      firstName: userDocumant.firstName,
-      email: userDocumant.email,
-      imgUrl: userDocumant.imgUrl,
-    };
+    
+    user._id = user?._id.toString();
 
     return user;
   } catch (error) {

@@ -19,6 +19,17 @@ const formDataToUserDTO = (formData: FormData): IUserDtoCreate => {
   return returnedData;
 };
 
+const getEmpty = (): IUser => {
+  return {
+    email: "",
+    firstName: "",
+    _id: "",
+    imgUrl: "",
+    lastName: "",
+  };
+};
+
 export const authUtil = {
   formDataToUserDTO,
+  getEmpty,
 };
