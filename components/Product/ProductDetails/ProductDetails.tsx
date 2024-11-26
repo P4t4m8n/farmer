@@ -61,7 +61,7 @@ const ProductDetailsModel = ({ product }: Props) => {
           <NutritionItem nutrition={nutrition} />
         </div>
       </div>
-      <ProductBtn productSmall={productSmall} />
+      <ProductBtn productSmall={productSmall} styleMode="page" />
     </div>
   );
 };

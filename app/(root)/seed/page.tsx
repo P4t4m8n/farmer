@@ -4,6 +4,6 @@ import React from "react";
 
 export default async function Seed() {
   await createCollections()
-  // await seed();
+  await seed();
   return <div>Seed</div>;
 }

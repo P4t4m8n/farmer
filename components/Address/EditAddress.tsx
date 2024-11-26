@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Button from "@/components/General/Button";
 import Input from "@/components/General/Input";
 import { iconService } from "@/components/Icons/Icons";

@@ -1,4 +1,4 @@
-import { Document, ObjectId } from "mongodb";
+import { Document } from "mongodb";
 
 type TSeason = "spring" | "summer" | "fall" | "winter" | "year-round";
 type TProductType =

@@ -4,7 +4,7 @@ import { ObjectId } from "mongodb";
 import DatabaseService from "../mongo/db";
 import { addressUtil } from "../utils/address.util";
 import { AppError } from "../utils/AppError";
-import { IAddressDocumant } from "../mongo/models/address.model";
+import { IAddressDocumant, IAddressDtoUpdate } from "../mongo/models/address.model";
 
 export const getAddresses = async (
   filter: IAddressFIlter
@@ -64,7 +64,7 @@ export const saveAddress = async (
       await DatabaseService.getCollection<IAddressDocumant>("addresses");
 
     const { upsertedId } = await addressCollection.updateOne(
-      { _id: new ObjectId(dto?._id as string) },
+      { _id: new ObjectId((dto as IAddressDtoUpdate)?._id ) },
       { $set: dto },
       { upsert: true }
     );

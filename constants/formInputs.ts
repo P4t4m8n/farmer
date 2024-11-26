@@ -3,7 +3,6 @@ export const LOGIN_INPUTS: TInput[] = [
     type: "email",
     placeholder: "Email",
     name: "email",
-    label: "Email",
     required: true,
     pattern: "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$", // Normal email format
     title: "Please enter a valid email address.",
@@ -12,7 +11,7 @@ export const LOGIN_INPUTS: TInput[] = [
     type: "password",
     placeholder: "Password",
     name: "password",
-    label: "Password",
+
     autoComplete: "current-password",
     pattern: "^(?=.*[A-Z])(?=.*\\d).{6,}$", // At least 6 chars, 1 uppercase, 1 number
     required: true,
@@ -27,7 +26,7 @@ export const SIGN_UP_INPUTS: TInput[] = [
     type: "text",
     placeholder: "First name",
     name: "firstName",
-    label: "First name",
+
     required: true,
     title: "First name must contain at least 2 letters.",
     pattern: "^[a-zA-Z]{2,}$", // Only letters, at least 2 characters
@@ -36,7 +35,7 @@ export const SIGN_UP_INPUTS: TInput[] = [
     type: "text",
     placeholder: "Last name",
     name: "lastName",
-    label: "Last name",
+
     autoComplete: "family-name",
     required: true,
     title: "Last name must contain at least 2 letters.",
