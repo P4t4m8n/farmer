@@ -67,7 +67,7 @@ const PersonalDetails = ({
   ];
 
   return (
-    <form className=" font-text grid gap-2 grid-cols-2 grid-rows-2  w-full h-[calc(50%-2rem)]">
+    <form className=" font-text grid gap-2 grid-cols-2 grid-rows-2  w-full h-24">
       {inputProps.map((input) => (
         <Input key={input.name} inputProps={input} />
       ))}

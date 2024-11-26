@@ -23,7 +23,7 @@ const CheckoutIndex = ({ order, addresses }: Props) => {
   };
 
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full border">
       {stage === "details" && (
         <CheckoutDetails
           order={orderToEdit}

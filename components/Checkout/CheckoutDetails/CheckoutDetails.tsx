@@ -1,5 +1,5 @@
 import Button from "@/components/General/Button";
-import AddressDetails from "./AddressDetails";
+import AddressDetails from "./Address/AddressDetails";
 import PersonalDetails from "./PersonalDetails";
 
 interface Props {
@@ -15,7 +15,7 @@ const CheckoutDetails = ({
   setOrderToEdit,
 }: Props) => {
   return (
-    <div className="dark:bg-inherit grid gap-4 h-full w-1/3">
+    <div className="dark:bg-inherit flex flex-col gap-4 h-full w-1/3">
       <PersonalDetails {...order.userDetails} setOrderToEdit={setOrderToEdit} />
       <AddressDetails
         addresses={addresses}
@@ -27,6 +27,7 @@ const CheckoutDetails = ({
         onClick={() => onChangeStage("deleviry")}
         style="primary"
         size="medium"
+        className="border"
       >
         Next
       </Button>

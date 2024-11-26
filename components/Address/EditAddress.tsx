@@ -11,7 +11,7 @@ interface Props {
   address?: IAddress;
 }
 
-const AddAddress = ({ setAddresses, address }: Props) => {
+const EditAddress = ({ setAddresses, address }: Props) => {
   const isFirstRender = useRef(true);
   const modelRef = useRef(null);
   const [isOpen, setIsOpen] = useModel(modelRef);
@@ -159,4 +159,4 @@ const AddAddress = ({ setAddresses, address }: Props) => {
   );
 };
 
-export default AddAddress;
+export default EditAddress;
