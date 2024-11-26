@@ -1,6 +1,6 @@
 import xss from "xss";
-import { IAddressDtoUpdate, IAddressDtoCreate } from "../mongo/models";
 import { ObjectId } from "mongodb";
+import { IAddressDtoCreate, IAddressDtoUpdate } from "../mongo/models/address.model";
 
 const formDataToDTO = (
   formData: FormData
@@ -14,8 +14,8 @@ const formDataToDTO = (
     name: xss(formData.get("streetName")?.toString() || ""),
     number: xss(formData.get("streetNumber")?.toString() || ""),
     floor: xss(formData.get("floor")?.toString() || ""),
-    entrance: xss(formData.get("enttrance")?.toString() || ""),
-    apartment: xss(formData.get("aprtmeant")?.toString() || ""),
+    entrance: xss(formData.get("entrance")?.toString() || ""),
+    apartment: xss(formData.get("apartment")?.toString() || ""),
   };
   const userId = new ObjectId(xss(formData.get("userId")?.toString() || ""));
 

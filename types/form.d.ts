@@ -17,6 +17,7 @@ declare type TInput = {
   inputMode?: "numeric";
   hidden?: boolean;
   value?: string;
+  id?: string;
   defaultValue?: string;
   maxLength?: number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;

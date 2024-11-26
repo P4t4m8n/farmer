@@ -12,6 +12,7 @@ interface Props {
 }
 
 const AddAddress = ({ setAddresses, address }: Props) => {
+  const isFirstRender = useRef(true);
   const modelRef = useRef(null);
   const [isOpen, setIsOpen] = useModel(modelRef);
   const [state, formAction, isPending] = useActionState(
@@ -23,13 +24,17 @@ const AddAddress = ({ setAddresses, address }: Props) => {
   const prevStateRef = useRef<IAddress | null>(null);
 
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     // Only update if the state has changed and is not the same as the previous state
     if (state && state !== prevStateRef.current) {
       prevStateRef.current = state;
       setAddresses(state);
       setIsOpen(false);
     }
-  }, [state, setAddresses]);
+  }, [state]);
 
   const items: TInput[] = [
     {
