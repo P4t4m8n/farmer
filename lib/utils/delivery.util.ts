@@ -1,6 +1,6 @@
 const getDeliveryDates = (
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  address: IAddress
+  address: Partial<IAddress>
 ): {
   time: string;
   date: string;
@@ -14,6 +14,7 @@ const getDeliveryDates = (
     const delivryWindow = {
       time: "15:00 - 21:00",
       date: nextDay.toISOString().split("T")[0],
+      day: nextDay.toLocaleString("en-US", { weekday: "long" }),
     };
     dates.push(delivryWindow);
   }

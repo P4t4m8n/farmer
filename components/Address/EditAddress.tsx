@@ -4,7 +4,6 @@ import Input from "@/components/General/Input";
 import { iconService } from "@/components/Icons/Icons";
 import { useModel } from "@/hooks/useModel";
 import { saveAddress } from "@/lib/actions/address.actions";
-import { addressClientService } from "@/lib/client/address.client.service";
 import { useActionState, useEffect, useRef } from "react";
 
 interface Props {
@@ -16,19 +15,19 @@ const EditAddress = ({ setAddresses, address }: Props) => {
   const isFirstRender = useRef(true);
   const modelRef = useRef(null);
   const [isOpen, setIsOpen] = useModel(modelRef);
-  const [state, formAction, isPending] = useActionState(
-    saveAddress,
-    address || addressClientService.getEmpty()
-  );
+  const [state, formAction, isPending] = useActionState(saveAddress, address);
 
   //Ref to track the previous state
-  const prevStateRef = useRef<IAddress | null>(null);
+  const prevStateRef = useRef<IAddress | null | undefined>(null);
 
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
+      prevStateRef.current = state;
       return;
     }
+ 
+
     // Only update if the state has changed and is not the same as the previous state
     if (state && state !== prevStateRef.current) {
       prevStateRef.current = state;

@@ -16,7 +16,7 @@ const CheckoutAddressList = ({
       {addresses.map((address) => (
         <li
           key={address._id}
-          className={`bg-inherit rounded border p-2 font-text  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text w-full hover:cursor-pointer ${
+          className={`bg-inherit rounded border p-2 font-text border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text w-full hover:cursor-pointer ${
             currentAddressId === address._id
               ? " bg-green-600 dark:bg-green-600"
               : ""

@@ -8,7 +8,11 @@ interface Props {
   addresses: IAddress[];
   setOrderToEdit: React.Dispatch<React.SetStateAction<IOrder>>;
 }
-const AddressDetails = ({ order, addresses, setOrderToEdit }: Props) => {
+const CheckoutAddressDetails = ({
+  order,
+  addresses,
+  setOrderToEdit,
+}: Props) => {
   const [stateAddresses, setStateAddresses] = useState<IAddress[]>(addresses);
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
@@ -24,7 +28,7 @@ const AddressDetails = ({ order, addresses, setOrderToEdit }: Props) => {
     setStateAddresses((prev) => [...prev, address]);
   };
   return (
-    <div className="h-[calc(100%-10rem)] overflow-auto">
+    <div className="h-[calc(100%-11rem-33px)] overflow-auto">
       <EditAddress
         setAddresses={setAddress}
         address={addressClientService.getEmpty(order.user._id)}
@@ -38,4 +42,4 @@ const AddressDetails = ({ order, addresses, setOrderToEdit }: Props) => {
   );
 };
 
-export default AddressDetails;
+export default CheckoutAddressDetails;

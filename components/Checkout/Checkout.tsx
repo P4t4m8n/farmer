@@ -3,6 +3,8 @@
 import { useState } from "react";
 import CheckoutDetails from "./CheckoutDetails/CheckoutDetails";
 import { useCart } from "@/hooks/useCart";
+import CheckoutDeliveryDetails from "./DeliveryDetails/CheckoutDeliveryDetails";
+import CheckoutPaymentDetails from "./PaymentDetails/CheckoutPaymentDetails";
 
 interface Props {
   order: IOrder;
@@ -12,6 +14,7 @@ const CheckoutIndex = ({ order, addresses }: Props) => {
   const [stage, setStage] = useState<"details" | "deleviry" | "payment">(
     "details"
   );
+
   const { cartItems } = useCart();
   const [orderToEdit, setOrderToEdit] = useState<IOrder>({
     ...order,
@@ -23,15 +26,21 @@ const CheckoutIndex = ({ order, addresses }: Props) => {
   };
 
   return (
-    <div className="h-full w-full border">
-      {stage === "details" && (
-        <CheckoutDetails
-          order={orderToEdit}
-          addresses={addresses}
-          onChangeStage={onChangeStage}
-          setOrderToEdit={setOrderToEdit}
-        />
-      )}
+    <div className="h-full w-full  flex gap-4">
+      <CheckoutDetails
+        order={orderToEdit}
+        addresses={addresses}
+        onChangeStage={onChangeStage}
+        setOrderToEdit={setOrderToEdit}
+        isDetails={stage === "details"}
+      />
+      <CheckoutDeliveryDetails
+        isDelivery={stage === "deleviry"}
+        address={orderToEdit?.address}
+        onChangeStage={onChangeStage}
+        setOrderToEdit={setOrderToEdit}
+      />
+      <CheckoutPaymentDetails isPayment={stage === "payment"} />
     </div>
   );
 };

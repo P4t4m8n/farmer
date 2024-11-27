@@ -26,3 +26,9 @@ declare interface IOrder extends IEntity {
 declare interface IOrderFilter {
   status?: TOrderStatus;
 }
+
+declare type TDelivery = {
+  date: string;
+  time: string;
+  day: string;
+};

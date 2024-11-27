@@ -7,7 +7,7 @@ interface Props {
   phone: string;
   setOrderToEdit: React.Dispatch<React.SetStateAction<IOrder>>;
 }
-const PersonalDetails = ({
+const CheckoutPersonalDetails = ({
   firstName,
   lastName,
   email,
@@ -31,7 +31,7 @@ const PersonalDetails = ({
       value: firstName,
       required: true,
       className:
-        "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text",
+        "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text w-full",
     },
     {
       onChange,
@@ -41,7 +41,7 @@ const PersonalDetails = ({
       value: lastName,
       required: true,
       className:
-        "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text",
+        "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text  w-full",
     },
     {
       onChange,
@@ -51,7 +51,7 @@ const PersonalDetails = ({
       value: email,
       required: true,
       className:
-        "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text",
+        "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text  w-full",
     },
     {
       onChange,
@@ -62,7 +62,7 @@ const PersonalDetails = ({
       required: true,
       pattern: "[0-9]{3}-[0-9]{7}",
       className:
-        "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text",
+        "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text  w-full",
     },
   ];
 
@@ -75,4 +75,4 @@ const PersonalDetails = ({
   );
 };
 
-export default PersonalDetails;
+export default CheckoutPersonalDetails;

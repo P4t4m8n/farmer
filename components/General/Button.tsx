@@ -1,7 +1,7 @@
 interface Props {
   style: "primary" | "secondary" | "tertiary";
   size: "small" | "medium" | "large";
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
