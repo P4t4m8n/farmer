@@ -5,6 +5,7 @@ import { iconService } from "@/components/Icons/Icons";
 import { useModel } from "@/hooks/useModel";
 import { saveAddress } from "@/lib/actions/address.actions";
 import { useActionState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 
 interface Props {
   setAddresses: (address: IAddress) => void;
@@ -13,7 +14,7 @@ interface Props {
 
 const EditAddress = ({ setAddresses, address }: Props) => {
   const isFirstRender = useRef(true);
-  const modelRef = useRef(null);
+  const modelRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useModel(modelRef);
   const [state, formAction, isPending] = useActionState(saveAddress, address);
 
@@ -26,7 +27,6 @@ const EditAddress = ({ setAddresses, address }: Props) => {
       prevStateRef.current = state;
       return;
     }
- 
 
     // Only update if the state has changed and is not the same as the previous state
     if (state && state !== prevStateRef.current) {
@@ -136,25 +136,27 @@ const EditAddress = ({ setAddresses, address }: Props) => {
         {iconService.PlusSvg(6)}
         <span className="text-lg">Add Address</span>
       </Button>
-      {isOpen && (
-        <form
-          action={formAction}
-          className="open-model fixed z-50 top-1/2 bg-light-btn dark:bg-dark-btn left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 w-96 aspect-square  grid gap-2 shadow-model rounded"
-        >
-          {items.map((input) => (
-            <Input key={input.name} inputProps={input} />
-          ))}
-          <Button
-            disabled={isPending}
-            type="submit"
-            style="primary"
-            size="large"
-            className="bg-drak-btn font-bold justify-self-center dark:bg-light-btn text-light-text dark:text-dark-text w-fit p-2"
+      {isOpen &&
+        createPortal(
+          <form
+            action={formAction}
+            className="open-model fixed z-50 top-1/2 bg-light-btn dark:bg-dark-btn left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 w-96 aspect-square  grid gap-2 shadow-model rounded"
           >
-            Save
-          </Button>
-        </form>
-      )}
+            {items.map((input) => (
+              <Input key={input.name} inputProps={input} />
+            ))}
+            <Button
+              disabled={isPending}
+              type="submit"
+              style="primary"
+              size="large"
+              className="bg-drak-btn font-bold justify-self-center dark:bg-light-btn text-light-text dark:text-dark-text w-fit p-2"
+            >
+              Save
+            </Button>
+          </form>,
+          document.body
+        )}
     </div>
   );
 };

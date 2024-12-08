@@ -5,60 +5,48 @@ interface Props {
   lastName: string;
   email: string;
   phone: string;
-  setOrderToEdit: React.Dispatch<React.SetStateAction<IOrder>>;
+  userId: string;
 }
 const CheckoutPersonalDetails = ({
   firstName,
   lastName,
   email,
   phone,
-  setOrderToEdit,
+  userId,
 }: Props) => {
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setOrderToEdit((prev) => ({
-      ...prev,
-      userDetails: { ...prev.userDetails, [name]: value },
-    }));
-  };
-
   const inputProps: TInput[] = [
     {
-      onChange,
       type: "text",
       placeholder: "First Name",
       name: "firstName",
-      value: firstName,
+      defaultValue: firstName,
       required: true,
       className:
         "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text w-full",
     },
     {
-      onChange,
       type: "text",
       placeholder: "Last Name",
       name: "lastName",
-      value: lastName,
+      defaultValue: lastName,
       required: true,
       className:
         "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text  w-full",
     },
     {
-      onChange,
       type: "email",
       placeholder: "Email",
       name: "email",
-      value: email,
+      defaultValue: email,
       required: true,
       className:
         "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text  w-full",
     },
     {
-      onChange,
       type: "tel",
       placeholder: "XXX-XXXXXXX",
       name: "phone",
-      value: phone,
+      defaultValue: phone,
       required: true,
       pattern: "[0-9]{3}-[0-9]{7}",
       className:
@@ -67,11 +55,20 @@ const CheckoutPersonalDetails = ({
   ];
 
   return (
-    <form className=" font-text grid gap-2 grid-cols-2 grid-rows-2  w-full h-24">
+    <div className=" font-text grid gap-2 grid-cols-2 grid-rows-2  w-full h-24">
       {inputProps.map((input) => (
         <Input key={input.name} inputProps={input} />
       ))}
-    </form>
+      <Input
+        inputProps={{
+          type: "text",
+          name: "userId",
+          hidden: true,
+          defaultValue: userId,
+          className: "hidden",
+        }}
+      />
+    </div>
   );
 };
 

@@ -1,27 +1,30 @@
 import ProductList from "./ProductList";
 import SideNav from "./SideNav";
+import SubProductList from "./SubProductList";
 
 interface Props {
-  productsMap: Record<string, IProductSmall[]>;
+  products: IProductSmall[];
   subProductList: string[];
+  subProductType: string;
 }
 
-const ProductIndex = ({ productsMap, subProductList }: Props) => {
+const ProductIndex = ({ products, subProductList, subProductType }: Props) => {
   return (
     <div className="h-full relative flex w-full ">
       <SideNav subProductList={subProductList} />
-      <ul className="pl-64 w-full gap-8 flex flex-col">
-        {subProductList.map((subProduct) => (
-          <li
-            key={subProduct}
-            id={subProduct}
-            className=" scroll-mt-[9.5rem] pt-16 "
-          >
-            <h3 className="text-4xl font-title pb-8">{subProduct}</h3>
-            <ProductList products={productsMap[subProduct]} styleMode="page" />
-          </li>
-        ))}
-      </ul>
+      <SubProductList
+        subProductType={subProductType}
+        subProductList={subProductList}
+      >
+        <li
+          key={subProductType}
+          id={subProductType}
+          className=" scroll-mt-[9.5rem] pt-16 "
+        >
+          <h3 className="text-4xl font-title pb-8">{subProductType}</h3>
+          <ProductList products={products} styleMode="page" />
+        </li>
+      </SubProductList>
     </div>
   );
 };

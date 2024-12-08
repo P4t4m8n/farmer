@@ -1,9 +1,11 @@
+import { MouseEvent } from "react";
+
 interface Props {
   style: "primary" | "secondary" | "tertiary";
   size: "small" | "medium" | "large";
   children?: React.ReactNode;
   className?: string;
-  onClick?: () => void;
+  onClick?: (() => void) | ((e: React.MouseEvent<HTMLButtonElement>) => void);
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
 }

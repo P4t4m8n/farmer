@@ -4,15 +4,16 @@ interface Props {
   children?: React.ReactNode;
 }
 export default function Input({ inputProps, children, error }: Props) {
-  const { name } = inputProps;
+  const { id } = inputProps;
   return (
     <div className=" bg-inherit">
-      <label className="bg-inherit" htmlFor={name}>
+      <label className="bg-inherit" htmlFor={id}>
         {children && children}
         {error && <p className="text-red-500 text-sm">{error}</p>}
       </label>
       <input
         {...inputProps}
+      
         
       />
     </div>

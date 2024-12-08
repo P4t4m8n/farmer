@@ -4,10 +4,7 @@ import { ObjectId } from "mongodb";
 import DatabaseService from "../mongo/db";
 
 export const getProducts = async (
-  filter: IProductFilter,
-  skip = 0,
-  limit = 100,
-  isSmallProduct = true
+  filter: IProductFilter
 ): Promise<IProductSmall[]> => {
   try {
     const productsCollection = await DatabaseService.getCollection<IProduct>(
@@ -15,25 +12,31 @@ export const getProducts = async (
     );
 
     const pipeline: Record<string, unknown>[] = [];
+    const { name, skip, productType, limit, isSmallProduct, subProductType } =
+      filter;
 
     // Build the $match stage based on the filter
     const matchStage: Record<string, unknown> = {};
 
-    if (filter.name) {
+    if (name) {
       matchStage.name = { $regex: filter.name, $options: "i" }; // Case-insensitive regex search
     }
 
-    if (filter.productType) {
+    if (productType) {
       matchStage.productType = filter.productType;
+    }
+
+    if (subProductType) {
+      matchStage.subProductType = filter.subProductType;
     }
 
     pipeline.push({ $match: matchStage });
 
     // Apply $skip and $limit for pagination
-    if (skip > 0) {
+    if ((skip || 0) > 0) {
       pipeline.push({ $skip: skip });
     }
-    if (limit > 0) {
+    if ((limit || 100) > 0) {
       pipeline.push({ $limit: limit });
     }
 

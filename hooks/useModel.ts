@@ -14,7 +14,7 @@ import {
  * @returns A tuple containing the modal state and a function to update the state
  */
 export const useModel = (
-  ref: React.RefObject<Element>,
+  ref: React.RefObject<Element | null>,
   callBack?: null | (() => void)
 ): [boolean, Dispatch<SetStateAction<boolean>>] => {
   const [open, setOpen] = useState(false);

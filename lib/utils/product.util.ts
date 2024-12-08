@@ -7,7 +7,7 @@ import {
 const getProductSubList = (type: TProductType): string[] => {
   switch (type) {
     case "vegetable":
-      return VEG_SUB_PRODUCT_TYPE.slice();
+      return VEG_SUB_PRODUCT_TYPE;
     case "fruit":
       return FRUIT_SUB_PRODUCT_TYPE.slice();
     case "legume":

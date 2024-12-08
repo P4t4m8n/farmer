@@ -1,47 +1,59 @@
 "use client";
 
-import { useState } from "react";
+import { useActionState, useRef, useState } from "react";
 import CheckoutDetails from "./CheckoutDetails/CheckoutDetails";
 import { useCart } from "@/hooks/useCart";
-import CheckoutDeliveryDetails from "./DeliveryDetails/CheckoutDeliveryDetails";
-import CheckoutPaymentDetails from "./PaymentDetails/CheckoutPaymentDetails";
+import CheckoutDelivery from "./CheckoutDelivery/CheckoutDelivery";
+import ConfirmOrder from "./CheckoutConfirm/ConfirmOrder";
+import { saveOrder } from "@/lib/actions/order.actions";
+import { orderClientService } from "@/lib/client/order.client.service";
 
 interface Props {
   order: IOrder;
   addresses: IAddress[];
 }
 const CheckoutIndex = ({ order, addresses }: Props) => {
-  const [stage, setStage] = useState<"details" | "deleviry" | "payment">(
-    "details"
-  );
-
+  const [stage, setStage] = useState<TCheckoutStage>("details");
   const { cartItems } = useCart();
-  const [orderToEdit, setOrderToEdit] = useState<IOrder>({
+  const currentCity = useRef<string | null>(null);
+
+  const orderToEdit = {
     ...order,
     products: cartItems,
-  });
+    productsPrice: orderClientService.calculateProductsPrice(cartItems),
+    deliveryPrice: 42,
+  };
+  const [state, formAction, isPending] = useActionState(saveOrder, orderToEdit);
 
-  const onChangeStage = (stage: "details" | "deleviry" | "payment") => {
+
+  const onChangeStage = (stage: TCheckoutStage, city?: string) => {
+    if (stage === "deleviry") {
+      currentCity.current = city || null;
+    }
     setStage(stage);
   };
 
   return (
-    <div className="h-full w-full  flex gap-4">
+    <form action={formAction} className="h-full w-full flex gap-4">
       <CheckoutDetails
         order={orderToEdit}
         addresses={addresses}
         onChangeStage={onChangeStage}
-        setOrderToEdit={setOrderToEdit}
         isDetails={stage === "details"}
       />
-      <CheckoutDeliveryDetails
+      <CheckoutDelivery
         isDelivery={stage === "deleviry"}
-        address={orderToEdit?.address}
+        currentCity={currentCity.current}
         onChangeStage={onChangeStage}
-        setOrderToEdit={setOrderToEdit}
       />
-      <CheckoutPaymentDetails isPayment={stage === "payment"} />
-    </div>
+      <ConfirmOrder
+        isConfirm={stage === "confirm"}
+        isSubmiting={isPending}
+        productsPrice={orderToEdit.productsPrice}
+        deliveryPrice={orderToEdit.deliveryPrice}
+        onChangeStage={onChangeStage}
+      />
+    </form>
   );
 };
 

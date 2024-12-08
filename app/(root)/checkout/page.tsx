@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import CheckoutIndex from "@/components/Checkout/Checkout";
 import { getAddresses } from "@/lib/actions/address.actions";
 import { getSessionUser } from "@/lib/actions/auth.actions";

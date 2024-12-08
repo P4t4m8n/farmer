@@ -6,23 +6,9 @@ import CheckoutAddressList from "./CheckoutAddressList";
 interface Props {
   order: IOrder;
   addresses: IAddress[];
-  setOrderToEdit: React.Dispatch<React.SetStateAction<IOrder>>;
 }
-const CheckoutAddressDetails = ({
-  order,
-  addresses,
-  setOrderToEdit,
-}: Props) => {
+const CheckoutAddressDetails = ({ order, addresses }: Props) => {
   const [stateAddresses, setStateAddresses] = useState<IAddress[]>(addresses);
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    const address = stateAddresses.find((address) => address?._id === value);
-    if (!address) return;
-    setOrderToEdit((prev) => ({
-      ...prev,
-      address,
-    }));
-  };
 
   const setAddress = (address: IAddress) => {
     setStateAddresses((prev) => [...prev, address]);
@@ -35,8 +21,6 @@ const CheckoutAddressDetails = ({
       />
       <CheckoutAddressList
         addresses={stateAddresses}
-        onChange={onChange}
-        currentAddressId={order.address?._id || ""}
       />
     </div>
   );

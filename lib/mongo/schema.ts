@@ -41,99 +41,164 @@ export const createCollections = async () => {
     // });
 
     // Address Collection
-    await db.createCollection("addresses", {
-      validator: {
-        $jsonSchema: {
-          bsonType: "object",
-          required: ["street", "city"],
-          properties: {
-            street: {
-              bsonType: "object",
-              required: ["name"],
-              description: "Street is required",
-              properties: {
-                name: {
-                  bsonType: "string",
-                  description: "Street name is required",
-                },
-                number: {
-                  bsonType: "string",
-                  description: "Street number is required",
-                },
-                floor: { bsonType: "string" },
-                apartment: { bsonType: "string" },
-                entrance: { bsonType: "string" },
-              },
-            },
-            city: { bsonType: "string", description: "City is required" },
-            state: { bsonType: "string" },
-            zipCode: { bsonType: "string" },
-            country: { bsonType: "string", description: "Country is required" },
-            userId: {
-              bsonType: "objectId",
-              description: "User ID is required",
-            },
-          },
-        },
-      },
-    });
-
-    // // Order Collection
-    // await db.createCollection("orders", {
+    // await db.createCollection("addresses", {
     //   validator: {
     //     $jsonSchema: {
     //       bsonType: "object",
-    //       required: ["user", "orderAddress", "totalPrice", "products"],
+    //       required: ["street", "city"],
     //       properties: {
-    //         user: { bsonType: "objectId", description: "User ID is required" },
-    //         orderAddress: {
-    //           bsonType: "objectId",
-    //           description: "Order address ID is required",
-    //         },
-    //         orderDate: { bsonType: "date", description: "Order date" },
-    //         totalPrice: {
-    //           bsonType: "double",
-    //           minimum: 0,
-    //           description: "Total price is required",
-    //         },
-    //         status: {
-    //           bsonType: "string",
-    //           enum: [
-    //             "pending",
-    //             "processing",
-    //             "shipped",
-    //             "delivered",
-    //             "cancelled",
-    //           ],
-    //           description: "Order status",
-    //         },
-    //         products: {
-    //           bsonType: "array",
-    //           items: {
-    //             bsonType: "object",
-    //             required: ["productId", "quantity", "quantityType"],
-    //             properties: {
-    //               productId: {
-    //                 bsonType: "objectId",
-    //                 description: "Product ID is required",
-    //               },
-    //               quantity: {
-    //                 bsonType: "int",
-    //                 minimum: 1,
-    //                 description: "Quantity must be at least 1",
-    //               },
-    //               quantityType: {
-    //                 bsonType: "string",
-    //                 enum: ["lb", "oz", "g", "kg", "unit"],
-    //                 description: "Quantity type",
-    //               },
+    //         street: {
+    //           bsonType: "object",
+    //           required: ["name"],
+    //           description: "Street is required",
+    //           properties: {
+    //             name: {
+    //               bsonType: "string",
+    //               description: "Street name is required",
     //             },
+    //             number: {
+    //               bsonType: "string",
+    //               description: "Street number is required",
+    //             },
+    //             floor: { bsonType: "string" },
+    //             apartment: { bsonType: "string" },
+    //             entrance: { bsonType: "string" },
     //           },
+    //         },
+    //         city: { bsonType: "string", description: "City is required" },
+    //         state: { bsonType: "string" },
+    //         zipCode: { bsonType: "string" },
+    //         country: { bsonType: "string", description: "Country is required" },
+    //         userId: {
+    //           bsonType: "objectId",
+    //           description: "User ID is required",
     //         },
     //       },
     //     },
     //   },
     // });
+
+    // // Order Collection
+    await db.createCollection("orders", {
+      validator: {
+        $jsonSchema: {
+          bsonType: "object",
+          required: [
+            "user",
+            "orderAddress",
+            "productsPrice",
+            "deliveryPrice",
+            "products",
+            "deliveryDate",
+          ],
+          properties: {
+            userId: {
+              bsonType: "objectId",
+              description: "User ID is required",
+            },
+            addressId: {
+              bsonType: "objectId",
+              description: "Order address ID is required",
+            },
+            productsPrice: {
+              bsonType: "double",
+              minimum: 0,
+              description: "Total price is required",
+            },
+            deliveryPrice: {
+              bsonType: "double",
+              minimum: 0,
+              description: "Delivery price is required",
+            },
+            deliveryDate: { bsonType: "date", description: "Order date" },
+            isDeliverd: { bsonType: "bool", description: "Is order delivered" },
+            products: {
+              bsonType: "array",
+              items: {
+                bsonType: "object",
+                required: [
+                  "productId",
+                  "quantity",
+                  "quantityType",
+                  "totalPrice",
+                ],
+                properties: {
+                  productId: {
+                    bsonType: "objectId",
+                    description: "Product ID is required",
+                  },
+                  quantity: {
+                    bsonType: "int",
+                    minimum: 1,
+                    description: "Quantity must be at least 1",
+                  },
+                  quantityType: {
+                    bsonType: "string",
+                    enum: ["lb", "oz", "g", "kg", "unit"],
+                    description: "Quantity type",
+                  },
+                  totalPrice: {
+                    bsonType: "double",
+                    minimum: 0,
+                    description: "Total price is required",
+                  },
+                },
+              },
+            },
+            status: {
+              bsonType: "string",
+              enum: [
+                "pending",
+                "processing",
+                "shipped",
+                "delivered",
+                "cancelled",
+              ],
+              description: "Order status",
+            },
+            payment: {
+              bsonType: "object",
+              properties: {
+                authNum: { bsonType: "string" },
+                type: {
+                  bsonType: "string",
+                  enum: ["cash", "credit card"],
+                  description: "Payment method",
+                },
+                paymentDate: { bsonType: "date" },
+                email: { bsonType: "string" },
+                paymentName: { bsonType: "string" },
+                status: {
+                  bsonType: "string",
+                  enum: ["pending", "approved", "declined", "refunded"],
+                  description: "Payment status",
+                },
+              },
+            },
+            userDetails: {
+              bsonType: "object",
+              required: ["firstName", "lastName", "email", "phone"],
+              properties: {
+                firstName: {
+                  bsonType: "string",
+                  description: "First name is required",
+                },
+                lastName: {
+                  bsonType: "string",
+                  description: "Last name is required",
+                },
+                email: {
+                  bsonType: "string",
+                  pattern: "^.+@.+$",
+                  description: "Valid email is required",
+                },
+                phone: { bsonType: "string" },
+              },
+            },
+          },
+        },
+      },
+    });
 
     // // Product Collection
     // await db.createCollection("products", {

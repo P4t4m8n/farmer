@@ -19,32 +19,32 @@ const ProductBtn = memo(function ProductBtn({
   const { cartItem, updateCart } = useCartItem(productId);
 
   const [quantityType, setQuantityType] = useState<
-    IQuantityType & { amount: number }
+    IQuantityType & { quantity: number }
   >({
     ...productSmall.quantityType[0],
-    amount: cartItem?.amount || 0,
+    quantity: cartItem?.quantity || 0,
   });
 
   useEffect(() => {
     if (cartItem) {
-      const { quantityType: cartQuantityType, amount } = cartItem;
-      setQuantityType({ ...cartQuantityType, amount });
+      const { quantityType: cartQuantityType, quantity } = cartItem;
+      setQuantityType({ ...cartQuantityType, quantity });
     } else {
-      setQuantityType({ ...productSmall.quantityType[0], amount: 0 });
+      setQuantityType({ ...productSmall.quantityType[0], quantity: 0 });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cartItem]);
 
   const handleAmountChange = (dir: number) => {
-    const amount = dir ? quantityType.amount + dir : dir;
+    const amount = dir ? quantityType.quantity + dir : dir;
     if (amount >= 0) {
       updateCart(productSmall, quantityType, amount);
     }
   };
   const handleQuantityTypeChange = (qType: IQuantityType) => {
-    setQuantityType((prev) => ({ ...qType, amount: prev.amount }));
-    if (quantityType.amount > 0) {
-      updateCart(productSmall, qType, quantityType.amount);
+    setQuantityType((prev) => ({ ...qType, amount: prev.quantity }));
+    if (quantityType.quantity > 0) {
+      updateCart(productSmall, qType, quantityType.quantity);
     }
   };
   const createQuantityTypeChangeHandler = (qType: IQuantityType) => () => {
@@ -72,7 +72,7 @@ const ProductBtn = memo(function ProductBtn({
       </h3>
       <AmountChange
         style={style.btns}
-        amount={quantityType.amount}
+        amount={quantityType.quantity}
         handleAmountChange={handleAmountChange}
       />
       {styleMode === "cart" && (

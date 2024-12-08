@@ -2,20 +2,18 @@ import Button from "@/components/General/Button";
 import Input from "@/components/General/Input";
 import { apiClientService } from "@/lib/client/api.client.service";
 import { useEffect, useState } from "react";
-import CheckoutsHeader from "../Shared/CheckoutsHeader";
-import CheckoutsOverlay from "../Shared/CheckoutsOverlay";
+import CheckoutsHeader from "../CheckoutShared/CheckoutsHeader";
+import CheckoutsOverlay from "../CheckoutShared/CheckoutsOverlay";
 
 interface Props {
   isDelivery: boolean;
-  address: IAddress | null;
-  onChangeStage: (stage: "details" | "deleviry" | "payment") => void;
-  setOrderToEdit: React.Dispatch<React.SetStateAction<IOrder>>;
+  currentCity: string | null;
+  onChangeStage: (stage: TCheckoutStage) => void;
 }
-const CheckoutDeliveryDetails = ({
+const CheckoutDelivery = ({
   isDelivery,
-  address,
+  currentCity,
   onChangeStage,
-  setOrderToEdit,
 }: Props) => {
   const [deliveries, setDeliveries] = useState<TDelivery[]>();
   const [currentDelivery, setCurrentDelivery] = useState<TDelivery>();
@@ -30,10 +28,7 @@ const CheckoutDeliveryDetails = ({
   const getDeliveries = async () => {
     try {
       const _deliveries = await apiClientService.get<TDelivery[]>(
-        `delivery?${address?.city}`,
-        {
-          address,
-        }
+        `delivery?${currentCity ? `city=${currentCity}` : ""}`
       );
       setDeliveries(_deliveries);
     } catch (error) {
@@ -46,17 +41,12 @@ const CheckoutDeliveryDetails = ({
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
-    console.log("value:", value);
     const delivery = deliveries?.find((delivery) => delivery.date === value);
     setCurrentDelivery(delivery);
   };
 
   const hanldeChangeStage = () => {
-    setOrderToEdit((order) => ({
-      ...order,
-      delivery: currentDelivery,
-    }));
-    onChangeStage("payment");
+    onChangeStage("confirm");
   };
   return (
     <div className="dark:bg-inherit flex flex-col gap-4 h-full w-1/3 relative  ">
@@ -81,7 +71,7 @@ const CheckoutDeliveryDetails = ({
               <Input
                 inputProps={{
                   type: "radio",
-                  name: delivery.date,
+                  name: "deliveryDate",
                   id: delivery.date,
                   value: delivery.date,
                   onChange: handleChange,
@@ -113,7 +103,7 @@ const CheckoutDeliveryDetails = ({
           size="medium"
           className="border mt-auto"
         >
-          To Payment
+          To finalized
         </Button>
       )}
       <CheckoutsOverlay
@@ -124,4 +114,4 @@ const CheckoutDeliveryDetails = ({
   );
 };
 
-export default CheckoutDeliveryDetails;
+export default CheckoutDelivery;

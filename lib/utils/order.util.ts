@@ -1,11 +1,16 @@
+import xss from "xss";
+import { IOrderDtoCreate } from "../mongo/models/order.model";
+import { ObjectId } from "mongodb";
+
 const getEmpty = (user: IUser): IOrder => {
   return {
     user: user,
-    status: "",
+    status: "pending",
     address: null,
     receiptNumber: null,
     orderDate: new Date(),
-    totalPrice: 0,
+    productsPrice: 0,
+    deliveryPrice: 0,
     products: [],
     userDetails: {
       firstName: user?.firstName,
@@ -16,6 +21,78 @@ const getEmpty = (user: IUser): IOrder => {
   };
 };
 
+const getEmptyPayment = (): IOrderPayment => {
+  return {
+    authNum: null,
+    type: "credit card",
+    paymentDate: null,
+    email: "",
+    paymentName: "",
+    status: "pending",
+  };
+};
+
+const formDataToCreditCard = (formData: FormData): ICreditCard => {
+  const cardNumber = xss(formData.get("cardNumber")?.toString() || "");
+  const cardHolder = xss(formData.get("cardHolder")?.toString() || "");
+  const expiryDate = xss(formData.get("expiryDate")?.toString() || "");
+  const cvv = xss(formData.get("cvv")?.toString() || "");
+
+  return {
+    cardNumber,
+    cardHolder,
+    expiryDate,
+    cvv,
+  };
+};
+
+const fromDataToOrderDto = (
+  formData: FormData,
+  products: ICartItem[]
+): IOrderDtoCreate => {
+  const userId = new ObjectId(xss(formData.get("userId")?.toString() || ""));
+  const addressId = new ObjectId(
+    xss(formData.get("addressId")?.toString() || "")
+  );
+  const deliveryDate = new Date(
+    xss(formData.get("deliveryDate")?.toString() || "")
+  );
+  const productsPrice = +xss(formData.get("productsPrice")?.toString() || "");
+  const deliveryPrice = +xss(formData.get("deliveryPrice")?.toString() || "");
+  const status = "pending";
+  const userDetails = {
+    firstName: xss(formData.get("firstName")?.toString() || ""),
+    lastName: xss(formData.get("lastName")?.toString() || ""),
+    email: xss(formData.get("email")?.toString() || ""),
+    phone: xss(formData.get("phone")?.toString() || ""),
+  };
+
+  const orderItems = products.map((product) => {
+    return {
+      productId: new ObjectId(product.product._id),
+      quentityType: product.quantityType.type,
+      quantity: product.quantity,
+      totalPrice: product.totalPrice,
+    };
+  });
+
+  return {
+    userId,
+    addressId,
+    productsPrice,
+    deliveryPrice,
+    deliveryDate,
+    isDelivered: false,
+    status,
+    products: orderItems,
+    userDetails,
+    payment: getEmptyPayment(),
+  };
+};
+
 export const orderUtil = {
   getEmpty,
+  formDataToCreditCard,
+  fromDataToOrderDto,
+  getEmptyPayment,
 };

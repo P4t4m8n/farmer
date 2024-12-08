@@ -10,6 +10,7 @@ export const useCart = () => {
   const { getAllCartItems, updateCart, subscribe, clearCart } = context;
 
   const [cartItems, setCartItems] = useState(() => getAllCartItems());
+  console.log("cartItems:", cartItems)
 
   useEffect(() => {
     const handleChange = () => {

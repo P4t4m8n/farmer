@@ -9,20 +9,24 @@ export default async function ProductPage({
 }) {
   const { type } = await params;
   const productType = (type as TProductType) ?? "vegetable";
+  const subProductType = "garden vegetables";
 
-  const products = await getProducts({ productType });
+  const products = await getProducts({
+    productType,
+    subProductType,
+    skip: 0,
+    limit: 1000,
+    isSmallProduct: true,
+  });
+
 
   const subProductList = productUtil.getProductSubList(productType);
 
-  const productsMap: Record<string, IProductSmall[]> = {};
-
-  products.forEach((product) => {
-    if (!productsMap[product.subProductType]) {
-      productsMap[product.subProductType] = [];
-    }
-    productsMap[product.subProductType].push(product);
-  });
   return (
-    <ProductIndex productsMap={productsMap} subProductList={subProductList} />
+    <ProductIndex
+      products={products}
+      subProductType={subProductType}
+      subProductList={subProductList}
+    />
   );
 }

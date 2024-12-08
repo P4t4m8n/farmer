@@ -8,8 +8,8 @@ interface Props {
 
 export const AppProvider: FC<Props> = ({ children }) => {
   return (
-    <AuthProvider>
-      <CartProvider>{children}</CartProvider>
-    </AuthProvider>
+    <CartProvider>
+      <AuthProvider>{children}</AuthProvider>
+    </CartProvider>
   );
 };

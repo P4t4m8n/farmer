@@ -39,18 +39,18 @@ export const CartProvider: FC<Props> = ({ children }) => {
   const updateCart = (
     product: IProductSmall,
     quantityType: IQuantityType,
-    amount: number
+    quantity: number
   ) => {
     const productId = product._id!;
-    if (amount < 1) {
+    if (quantity < 1) {
       delete cartItemsRef.current[productId];
    
     } else {
       cartItemsRef.current[productId] = {
         product,
         quantityType,
-        amount,
-        totalPrice: amount * quantityType.price,
+        quantity,
+        totalPrice: quantity * quantityType.price,
       };
     }
 

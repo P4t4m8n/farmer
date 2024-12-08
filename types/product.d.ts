@@ -40,8 +40,10 @@ declare interface INutrition {
 declare interface IProductFilter {
   name?: string;
   productType?: TProductType;
+  subProductType?: string;
   limit?: number;
   skip?: number;
+  isSmallProduct?: boolean;
 }
 
 declare const PRODUCT_TYPE = [

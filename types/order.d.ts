@@ -6,21 +6,24 @@ declare type TOrderStatus =
   | "cancelled";
 
 declare interface IOrder extends IEntity {
-  user: IUser;
+  user: IUser; //The user who made the order
   address: IAddress | null;
   orderDate: Date;
-  totalPrice: number;
-  status: OrderStatus;
+  productsPrice: number;
+  deliveryPrice: number;
+  status: TOrderStatus;
   products: ICartItem[];
   createdAt?: Date;
   updatedAt?: Date;
   receiptNumber: string | null;
-  userDetails: {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phone: string;
-  };
+  userDetails: IUserDetails; //for who is the order. can be the user and the user can order for someone else
+}
+
+interface IUserDetails {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
 }
 
 declare interface IOrderFilter {
@@ -32,3 +35,22 @@ declare type TDelivery = {
   time: string;
   day: string;
 };
+
+declare interface ICreditCard {
+  cardNumber: string;
+  cardHolder: string;
+  expiryDate: string;
+  cvv: string;
+}
+
+declare interface IOrderPayment {
+  authNum: string | null;
+  type: "credit card" | "cash" | "other";
+  lastDigits?: string;
+  paymentDate: Date | null;
+  email: string;
+  paymentName: string;
+  status: paymentStatus;
+}
+
+type paymentStatus = "pending" | "approved" | "declined" | "refunded";

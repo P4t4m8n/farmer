@@ -1,11 +1,10 @@
 import { ReactNode } from "react";
 
 interface Props {
-  backgroundName: "main" | "secondary";
   children?: ReactNode;
 }
 
-export default function Parallax({ backgroundName, children }: Props) {
+export default function Parallax({ children }: Props) {
   return (
     <div className="relative h-screen overflow-hidden img-clip-path">
       <div

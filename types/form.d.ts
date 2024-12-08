@@ -22,6 +22,7 @@ declare type TInput = {
   maxLength?: number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
+  validate?: (value: string) => string;
 };
 
 declare interface ISelect extends TInput {
