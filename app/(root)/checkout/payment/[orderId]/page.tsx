@@ -1,4 +1,5 @@
 export const dynamic = "force-dynamic";
+import CheckoutPayment from "@/components/Checkout/CheckoutPayment/CheckoutPayment";
 import { getOrderById } from "@/lib/actions/order.actions";
 
 export default async function CheckoutPaymentPage({
@@ -9,5 +10,9 @@ export default async function CheckoutPaymentPage({
   const { orderId } = await params;
 
   const order = await getOrderById(orderId);
-  return <div>CheckoutPaymentPage</div>;
+  if (!order) {
+    return <div>Order not found</div>;
+  }
+  console.log("order:", order);
+  return <CheckoutPayment order={order} />;
 }

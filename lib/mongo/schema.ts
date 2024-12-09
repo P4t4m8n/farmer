@@ -84,8 +84,8 @@ export const createCollections = async () => {
         $jsonSchema: {
           bsonType: "object",
           required: [
-            "user",
-            "orderAddress",
+            "userId",
+            "addressId",
             "productsPrice",
             "deliveryPrice",
             "products",
@@ -101,17 +101,17 @@ export const createCollections = async () => {
               description: "Order address ID is required",
             },
             productsPrice: {
-              bsonType: "double",
+              bsonType: "number",
               minimum: 0,
               description: "Total price is required",
             },
             deliveryPrice: {
-              bsonType: "double",
+              bsonType: "number",
               minimum: 0,
               description: "Delivery price is required",
             },
             deliveryDate: { bsonType: "date", description: "Order date" },
-            isDeliverd: { bsonType: "bool", description: "Is order delivered" },
+            isDelivered: { bsonType: "bool", description: "Is order delivered" },
             products: {
               bsonType: "array",
               items: {
@@ -128,7 +128,7 @@ export const createCollections = async () => {
                     description: "Product ID is required",
                   },
                   quantity: {
-                    bsonType: "int",
+                    bsonType: "number",
                     minimum: 1,
                     description: "Quantity must be at least 1",
                   },
@@ -138,7 +138,7 @@ export const createCollections = async () => {
                     description: "Quantity type",
                   },
                   totalPrice: {
-                    bsonType: "double",
+                    bsonType: "number",
                     minimum: 0,
                     description: "Total price is required",
                   },
@@ -159,13 +159,13 @@ export const createCollections = async () => {
             payment: {
               bsonType: "object",
               properties: {
-                authNum: { bsonType: "string" },
+                authNum: { bsonType:["string", "null"] },
                 type: {
                   bsonType: "string",
                   enum: ["cash", "credit card"],
                   description: "Payment method",
                 },
-                paymentDate: { bsonType: "date" },
+                paymentDate: { bsonType: ["string", "null"] },
                 email: { bsonType: "string" },
                 paymentName: { bsonType: "string" },
                 status: {
@@ -200,7 +200,7 @@ export const createCollections = async () => {
       },
     });
 
-    // // Product Collection
+    // Product Collection
     // await db.createCollection("products", {
     //   validator: {
     //     $jsonSchema: {
@@ -250,7 +250,7 @@ export const createCollections = async () => {
     //             bsonType: "object",
     //             properties: {
     //               price: {
-    //                 bsonType: "double",
+    //                 bsonType: "number",
     //                 minimum: 0,
     //                 description: "Price is required",
     //               },
@@ -276,11 +276,11 @@ export const createCollections = async () => {
     //         nutrition: {
     //           bsonType: "object",
     //           properties: {
-    //             calories: { bsonType: "double", minimum: 0 },
-    //             protein: { bsonType: "double", minimum: 0 },
-    //             fat: { bsonType: "double", minimum: 0 },
-    //             carbohydrates: { bsonType: "double", minimum: 0 },
-    //             fiber: { bsonType: "double", minimum: 0 },
+    //             calories: { bsonType: "number", minimum: 0 },
+    //             protein: { bsonType: "number", minimum: 0 },
+    //             fat: { bsonType: "number", minimum: 0 },
+    //             carbohydrates: { bsonType: "number", minimum: 0 },
+    //             fiber: { bsonType: "number", minimum: 0 },
     //             vitamins: { bsonType: "array", items: { bsonType: "string" } },
     //             minerals: { bsonType: "array", items: { bsonType: "string" } },
     //           },

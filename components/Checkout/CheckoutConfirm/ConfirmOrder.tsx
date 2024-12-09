@@ -19,6 +19,21 @@ const ConfirmOrder = ({
   isConfirm,
   onChangeStage,
 }: Props) => {
+  const handleNextClick = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    stage: TCheckoutStage
+  ) => {
+    const form = (e.currentTarget.closest("form") as HTMLFormElement) || null;
+
+    // Check form validity
+    if (form && !form.checkValidity()) {
+      e.preventDefault(); // Prevent default action if form is invalid
+      form.reportValidity(); // Show validation feedback to the user
+      return;
+    }
+
+    onChangeStage(stage);
+  };
   return (
     <div className=" relative w-1/3 flex flex-col gap-4">
       <CheckoutsHeader text={"Payment Details"} />
@@ -53,7 +68,7 @@ const ConfirmOrder = ({
       </Button>
       <CheckoutsOverlay
         isHidden={isConfirm}
-        hanldeChangeStage={() => onChangeStage("confirm")}
+        hanldeChangeStage={(ev) => handleNextClick(ev, "confirm")}
       />
     </div>
   );

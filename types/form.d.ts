@@ -6,7 +6,7 @@ declare type TInputUserFormKeys =
   | "lastName";
 
 declare type TInput = {
-  type: "text" | "password" | "email" | "tel" | "number" | "radio";
+  type: "text" | "password" | "email" | "tel" | "number" | "radio"|"hidden";
   placeholder?: string;
   name: string;
   checked?: boolean;
@@ -23,6 +23,7 @@ declare type TInput = {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
   validate?: (value: string) => string;
+  readOnly?: boolean;
 };
 
 declare interface ISelect extends TInput {

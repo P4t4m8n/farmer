@@ -10,6 +10,11 @@ export const useCart = () => {
   const { getAllCartItems, updateCart, subscribe, clearCart } = context;
 
   const [cartItems, setCartItems] = useState(() => getAllCartItems());
+
+  const onClearCart = ()=>{
+    clearCart();
+    setCartItems([]);
+  }
   console.log("cartItems:", cartItems)
 
   useEffect(() => {
@@ -23,5 +28,5 @@ export const useCart = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { cartItems, updateCart, clearCart };
+  return { cartItems, updateCart, onClearCart };
 };

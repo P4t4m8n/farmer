@@ -39,15 +39,28 @@ const CheckoutDelivery = ({
     }
   };
 
+  const handleNextClick = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    stage: TCheckoutStage
+  ) => {
+    const form = (e.currentTarget.closest("form") as HTMLFormElement) || null;
+
+    // Check form validity
+    if (form && !form.checkValidity()) {
+      e.preventDefault(); // Prevent default action if form is invalid
+      form.reportValidity(); // Show validation feedback to the user
+      return;
+    }
+
+    onChangeStage(stage);
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     const delivery = deliveries?.find((delivery) => delivery.date === value);
     setCurrentDelivery(delivery);
   };
 
-  const hanldeChangeStage = () => {
-    onChangeStage("confirm");
-  };
   return (
     <div className="dark:bg-inherit flex flex-col gap-4 h-full w-1/3 relative  ">
       <CheckoutsHeader text="Delivery Details" />
@@ -98,7 +111,7 @@ const CheckoutDelivery = ({
       {isDelivery && (
         <Button
           disabled={!currentDelivery}
-          onClick={hanldeChangeStage}
+          onClick={(ev) => handleNextClick(ev, "confirm")}
           style="primary"
           size="medium"
           className="border mt-auto"
@@ -108,7 +121,7 @@ const CheckoutDelivery = ({
       )}
       <CheckoutsOverlay
         isHidden={isDelivery}
-        hanldeChangeStage={() => onChangeStage("deleviry")}
+        hanldeChangeStage={(ev) => handleNextClick(ev, "deleviry")}
       />
     </div>
   );

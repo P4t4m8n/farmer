@@ -29,7 +29,7 @@ export interface IOrderDtoCreate {
 
 interface IOrderItem {
   productId: ObjectId;
-  quentityType: TQuantityType; // enum
+  quantityType: TQuantityType; // enum
   quantity: number;
   totalPrice: number;
 }

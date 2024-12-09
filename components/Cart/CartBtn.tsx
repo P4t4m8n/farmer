@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { iconService } from "../Icons/Icons";
 interface Props {
@@ -5,6 +6,7 @@ interface Props {
   numOfItems: number;
 }
 const CartBtn = ({ setIsOpen, numOfItems }: Props) => {
+  console.log("numOfItems:", numOfItems)
   return (
     <button
       onClick={() => setIsOpen((prev) => !prev)}

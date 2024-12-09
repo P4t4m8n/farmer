@@ -2,12 +2,9 @@ import Button from "@/components/General/Button";
 
 interface Props {
   isHidden: boolean;
-  hanldeChangeStage: () => void;
+  hanldeChangeStage: (ev: React.MouseEvent<HTMLButtonElement>) => void;
 }
-const CheckoutsOverlay = ({
-  isHidden,
-  hanldeChangeStage,
-}: Props) => {
+const CheckoutsOverlay = ({ isHidden, hanldeChangeStage }: Props) => {
   return (
     <Button
       style="primary"

@@ -8,7 +8,7 @@ const getEmpty = (user: IUser): IOrder => {
     status: "pending",
     address: null,
     receiptNumber: null,
-    orderDate: new Date(),
+    deliveryDate: new Date(),
     productsPrice: 0,
     deliveryPrice: 0,
     products: [],
@@ -18,6 +18,7 @@ const getEmpty = (user: IUser): IOrder => {
       email: user?.email,
       phone: user?.phone || "",
     },
+    payment: getEmptyPayment(),
   };
 };
 
@@ -34,15 +35,18 @@ const getEmptyPayment = (): IOrderPayment => {
 
 const formDataToCreditCard = (formData: FormData): ICreditCard => {
   const cardNumber = xss(formData.get("cardNumber")?.toString() || "");
+  console.log("cardNumber:", cardNumber)
   const cardHolder = xss(formData.get("cardHolder")?.toString() || "");
   const expiryDate = xss(formData.get("expiryDate")?.toString() || "");
   const cvv = xss(formData.get("cvv")?.toString() || "");
+  const orderId = xss(formData.get("orderId")?.toString() || "");
 
   return {
     cardNumber,
     cardHolder,
     expiryDate,
     cvv,
+    orderId
   };
 };
 
@@ -50,6 +54,7 @@ const fromDataToOrderDto = (
   formData: FormData,
   products: ICartItem[]
 ): IOrderDtoCreate => {
+  console.log("*-************")
   const userId = new ObjectId(xss(formData.get("userId")?.toString() || ""));
   const addressId = new ObjectId(
     xss(formData.get("addressId")?.toString() || "")
@@ -66,11 +71,10 @@ const fromDataToOrderDto = (
     email: xss(formData.get("email")?.toString() || ""),
     phone: xss(formData.get("phone")?.toString() || ""),
   };
-
   const orderItems = products.map((product) => {
     return {
       productId: new ObjectId(product.product._id),
-      quentityType: product.quantityType.type,
+      quantityType: product.quantityType.type,
       quantity: product.quantity,
       totalPrice: product.totalPrice,
     };

@@ -2,13 +2,14 @@ import Link from "next/link";
 
 interface Props {
   cartItems: ICartItem[];
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
-const CartFooter = ({ cartItems }: Props) => {
+const CartFooter = ({ cartItems, setIsOpen }: Props) => {
   const totalPrice = cartItems.reduce((acc, item) => acc + item.totalPrice, 0);
   const delivery = 42.0;
   const total = totalPrice + delivery;
   return (
-    <footer className="border-t flex flex-col gap-2 h-40 ">
+    <footer className="border-t flex flex-col gap-2 h-40 w-full ">
       <span className="flex items-center justify-between">
         <h4>Total items cost</h4>
         <p>{totalPrice}$</p>
@@ -21,12 +22,14 @@ const CartFooter = ({ cartItems }: Props) => {
         <h3>Total</h3>
         <p>{total}$</p>
       </span>
-      <Link
-        className="bg-white rounded-2xl text-black-1 text-center p-2 mt-auto"
-        href="/checkout"
+      <button
+        className="bg-dark-btn dark:bg-light-btn rounded-2xl text-light-text dark:text-dark-text text-center p-2 mt-auto w-full"
+        onClick={() => setIsOpen(false)}
       >
-        CheckOut
-      </Link>
+        <Link className="w-full h-full flex  justify-center" href="/checkout">
+          CheckOut
+        </Link>
+      </button>
     </footer>
   );
 };

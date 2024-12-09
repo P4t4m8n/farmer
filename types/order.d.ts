@@ -8,13 +8,14 @@ declare type TOrderStatus =
 declare interface IOrder extends IEntity {
   user: IUser; //The user who made the order
   address: IAddress | null;
-  orderDate: Date;
+  deliveryDate: Date;
   productsPrice: number;
   deliveryPrice: number;
   status: TOrderStatus;
   products: ICartItem[];
   createdAt?: Date;
   updatedAt?: Date;
+  payment: IOrderPayment;
   receiptNumber: string | null;
   userDetails: IUserDetails; //for who is the order. can be the user and the user can order for someone else
 }
@@ -41,6 +42,7 @@ declare interface ICreditCard {
   cardHolder: string;
   expiryDate: string;
   cvv: string;
+  orderId: string;
 }
 
 declare interface IOrderPayment {

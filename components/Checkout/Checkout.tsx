@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useRef, useState } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
 import CheckoutDetails from "./CheckoutDetails/CheckoutDetails";
 import { useCart } from "@/hooks/useCart";
 import CheckoutDelivery from "./CheckoutDelivery/CheckoutDelivery";
@@ -17,14 +17,26 @@ const CheckoutIndex = ({ order, addresses }: Props) => {
   const { cartItems } = useCart();
   const currentCity = useRef<string | null>(null);
 
-  const orderToEdit = {
+  const orderToEdit = useRef({
     ...order,
-    products: cartItems,
-    productsPrice: orderClientService.calculateProductsPrice(cartItems),
+    products: cartItems || [],
+    productsPrice: orderClientService.calculateProductsPrice(cartItems || []),
     deliveryPrice: 42,
-  };
-  const [state, formAction, isPending] = useActionState(saveOrder, orderToEdit);
-
+  });
+  useEffect(() => {
+    orderToEdit.current = {
+      ...order,
+      products: cartItems || [],
+      productsPrice: orderClientService.calculateProductsPrice(cartItems || []),
+      deliveryPrice: 42,
+    };
+  }, [order, cartItems]);
+  const updatedSaveOrder = saveOrder.bind(null, orderToEdit.current);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_, formAction, isPending] = useActionState(
+    saveOrder,
+    orderToEdit.current
+  );
 
   const onChangeStage = (stage: TCheckoutStage, city?: string) => {
     if (stage === "deleviry") {
@@ -34,9 +46,9 @@ const CheckoutIndex = ({ order, addresses }: Props) => {
   };
 
   return (
-    <form action={formAction} className="h-full w-full flex gap-4">
+    <form action={updatedSaveOrder} className="h-full w-full flex gap-4">
       <CheckoutDetails
-        order={orderToEdit}
+        order={orderToEdit.current}
         addresses={addresses}
         onChangeStage={onChangeStage}
         isDetails={stage === "details"}
@@ -49,8 +61,8 @@ const CheckoutIndex = ({ order, addresses }: Props) => {
       <ConfirmOrder
         isConfirm={stage === "confirm"}
         isSubmiting={isPending}
-        productsPrice={orderToEdit.productsPrice}
-        deliveryPrice={orderToEdit.deliveryPrice}
+        productsPrice={orderToEdit.current.productsPrice}
+        deliveryPrice={orderToEdit.current.deliveryPrice}
         onChangeStage={onChangeStage}
       />
     </form>
