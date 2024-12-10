@@ -15,7 +15,6 @@ export const useCart = () => {
     clearCart();
     setCartItems([]);
   }
-  console.log("cartItems:", cartItems)
 
   useEffect(() => {
     const handleChange = () => {

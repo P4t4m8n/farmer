@@ -51,7 +51,7 @@ declare interface IOrderPayment {
   lastDigits?: string;
   paymentDate: Date | null;
   email: string;
-  paymentName: string;
+  cardHolder: string;
   status: paymentStatus;
 }
 

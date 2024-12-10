@@ -165,9 +165,9 @@ export const createCollections = async () => {
                   enum: ["cash", "credit card"],
                   description: "Payment method",
                 },
-                paymentDate: { bsonType: ["string", "null"] },
+                paymentDate: { bsonType: ["date", "null"] },
                 email: { bsonType: "string" },
-                paymentName: { bsonType: "string" },
+                cardHolder: { bsonType: "string" },
                 status: {
                   bsonType: "string",
                   enum: ["pending", "approved", "declined", "refunded"],

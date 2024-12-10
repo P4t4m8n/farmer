@@ -11,19 +11,16 @@ export const saveOrder = async (state: IOrder, formData: FormData) => {
   let orderId = "";
   try {
     const dto = orderUtil.fromDataToOrderDto(formData, state.products);
-    console.log("dto:", dto);
     const orderCollcations =
       await DatabaseService.getCollection<IOrderDocument>("orders");
 
     const { insertedId } = await orderCollcations.insertOne(dto, {
       writeConcern: { w: "majority", j: true },
     });
-    console.log("insertedId:", insertedId);
     if (!insertedId) {
       throw AppError.create("Error saving order", 500, true);
     }
     orderId = insertedId.toString();
-    console.log("orderId:", orderId);
   } catch (error) {
     if (error instanceof MongoServerError && error.errInfo) {
       console.error(
@@ -98,11 +95,8 @@ export const getOrderById = async (
   }
 };
 
-export const chargeCreditCard = async (
-  state: unknown,
-  formData: FormData
-): Promise<IOrderPayment> => {
-  console.log("formData:", formData)
+export const chargeCreditCard = async (state: unknown, formData: FormData) => {
+  console.log("FormData:", FormData);
   let url = "/checkout/success";
   try {
     const CC = orderUtil.formDataToCreditCard(formData);
@@ -112,9 +106,10 @@ export const chargeCreditCard = async (
       lastDigits: CC.cardNumber.slice(-4),
       paymentDate: new Date(),
       email: CC.cardHolder,
-      paymentName: CC.cardHolder,
+      cardHolder: CC.cardHolder,
       status: "approved",
     };
+    console.log("orderPayment:", orderPayment);
     const orderId = new ObjectId(CC.orderId);
     const orderCollcations =
       await DatabaseService.getCollection<IOrderDocument>("orders");
@@ -123,13 +118,19 @@ export const chargeCreditCard = async (
       { _id: orderId },
       { $set: { payment: orderPayment } }
     );
-    console.log("order:", order)
 
-    const deliveryDate = order?.delivryDate;
+    const deliveryDate = order?.deliveryDate;
 
     url = `/checkout/success?orderId=${CC.orderId}&deliveryDate=${deliveryDate}`;
-
   } catch (error) {
+    if (error instanceof MongoServerError && error.errInfo) {
+      console.error(
+        "Validation error details:",
+        JSON.stringify(error.errInfo.details, null, 2)
+      );
+    } else {
+      console.error("Full error:", error);
+    }
     throw AppError.create(`Error charging credit card ${error}`, 500, true);
   }
 

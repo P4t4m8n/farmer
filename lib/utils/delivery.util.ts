@@ -11,17 +11,30 @@ const getDeliveryDates = (
   for (let i = 1; i <= 3; i++) {
     const nextDay = new Date(today);
     nextDay.setDate(today.getDate() + i);
-    const delivryWindow = {
-      time: "15:00 - 21:00",
-      date: nextDay.toISOString().split("T")[0],
-      day: nextDay.toLocaleString("en-US", { weekday: "long" }),
-    };
-    dates.push(delivryWindow);
+    const deliveryWindow = formatDate(nextDay);
+    dates.push(deliveryWindow);
   }
 
   return dates;
 };
 
+const formatDate = (deliveryDate: string | Date): TDelivery => {
+  const fixedDate =
+    typeof deliveryDate === "string" ? new Date(deliveryDate) : deliveryDate;
+  const day = fixedDate.toLocaleString("en-us", {
+    weekday: "long",
+  });
+  const date = fixedDate.toISOString().split("T")[0];
+  const time = "15:00 - 21:00";
+
+  return {
+    day,
+    date,
+    time,
+  };
+};
+
 export const deliveryUtil = {
   getDeliveryDates,
+  formatDate,
 };

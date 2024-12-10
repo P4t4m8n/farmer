@@ -21,21 +21,18 @@ const getEmpty = (user: IUser): IOrder => {
     payment: getEmptyPayment(),
   };
 };
-
 const getEmptyPayment = (): IOrderPayment => {
   return {
     authNum: null,
     type: "credit card",
     paymentDate: null,
     email: "",
-    paymentName: "",
+    cardHolder: "",
     status: "pending",
   };
 };
-
 const formDataToCreditCard = (formData: FormData): ICreditCard => {
   const cardNumber = xss(formData.get("cardNumber")?.toString() || "");
-  console.log("cardNumber:", cardNumber)
   const cardHolder = xss(formData.get("cardHolder")?.toString() || "");
   const expiryDate = xss(formData.get("expiryDate")?.toString() || "");
   const cvv = xss(formData.get("cvv")?.toString() || "");
@@ -46,15 +43,13 @@ const formDataToCreditCard = (formData: FormData): ICreditCard => {
     cardHolder,
     expiryDate,
     cvv,
-    orderId
+    orderId,
   };
 };
-
 const fromDataToOrderDto = (
   formData: FormData,
   products: ICartItem[]
 ): IOrderDtoCreate => {
-  console.log("*-************")
   const userId = new ObjectId(xss(formData.get("userId")?.toString() || ""));
   const addressId = new ObjectId(
     xss(formData.get("addressId")?.toString() || "")

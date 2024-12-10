@@ -1,8 +1,11 @@
-export default async function CheckoutSuccess({
+import CheckoutSuccess from "@/components/Checkout/CheckoutSuccess/CheckoutSuccess";
+
+export default async function CheckoutSuccessPage({
   searchParams,
 }: {
-  searchParams: Promise<any>;
+  searchParams: Promise<{ orderId: string; deliveryDate: string }>;
 }) {
-  console.log(await searchParams);
-  return <div>page</div>;
+  const { orderId, deliveryDate } = await searchParams;
+
+  return <CheckoutSuccess orderId={orderId} deliveryDate={deliveryDate} />;
 }

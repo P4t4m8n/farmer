@@ -9,7 +9,6 @@ interface Props {
 }
 
 const CheckoutCreditCardForm = ({ orderId }: Props) => {
-  console.log("orderId:", orderId);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, formAction, isPending] = useActionState(chargeCreditCard, null);
 
@@ -20,9 +19,9 @@ const CheckoutCreditCardForm = ({ orderId }: Props) => {
       value: orderId,
     },
     {
-      name: "cardholderName",
+      name: "cardHolder",
       type: "text",
-      placeholder: "Enter your name",
+      placeholder: "Card holder",
       value: "John Doe",
       // validate: (value: string) => (value ? "" : "Name is required"),
     },

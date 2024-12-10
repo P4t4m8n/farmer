@@ -13,6 +13,5 @@ export default async function CheckoutPaymentPage({
   if (!order) {
     return <div>Order not found</div>;
   }
-  console.log("order:", order);
   return <CheckoutPayment order={order} />;
 }

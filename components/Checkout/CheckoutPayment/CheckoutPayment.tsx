@@ -6,7 +6,6 @@ interface Props {
 export default function CheckoutPayment({ order }: Props) {
   const { productsPrice, deliveryPrice, deliveryDate, address, userDetails,_id } =
     order as IOrder;
-  console.log("address:", address);
   const day = new Date(deliveryDate).toLocaleString("en-us", {
     weekday: "long",
   });
